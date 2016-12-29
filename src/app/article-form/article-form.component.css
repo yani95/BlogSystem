@@ -1,0 +1,69 @@
+md-input-container {
+    width: 27%;
+    margin-left: 4%;
+    margin-top: 1%;
+}
+
+#options {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 27% ;
+    margin-left: 4%;
+    margin-top: 1%;
+}
+
+.desc {
+  width: 27%;
+  margin-left: 4%;
+  margin-top: 1%;
+  float: left;
+}
+
+md-textarea {
+    width: 100%;
+}
+
+.SubmitBtn {
+  background-color: mediumpurple;
+  color: #fff;
+  margin-left: 4%;
+  margin-top: 1%;
+}
+
+.danger {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: red;
+  position: absolute;
+  top: 27px;
+  width: 100%;
+}
+
+span {
+    clear: both;
+    float: right;
+}
+
+md-card {
+    margin: 0 auto;
+    width: 90%;
+    min-height: 42%;
+}
+
+.formHead {
+    padding: 20px 23px;
+    margin: 0px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: rgba(0,0,0,.03);
+    border: 1px solid rgba(0,0,0,.03);
+    box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    border: 1px solid rgba(0,0,0,.03);
+    box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+    color: rgba(0,0,0,0.5);
+    font-weight: 700;
+}

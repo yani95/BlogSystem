@@ -1,0 +1,65 @@
+h1 { 
+    font-weight: bold; 
+    font-family: 'Lobster'; 
+    letter-spacing: 11px;
+    font-size: 50px;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+    color: white;
+    width: 70%;
+    display: inline-block;
+    margin:  0px;
+    margin-left: 5%;
+} 
+.navbar {
+    position: relative;
+    padding: 10px 0;
+    background-color:rgba(93,91,171,0.7);
+    margin-bottom: 60px;
+}
+
+li a {
+    color: white;
+    font-size: 35px;
+    font-family:'Lobster';
+    margin-top: 5px;
+}
+
+li a:hover {
+    color: darkslateblue;
+    cursor: pointer;
+}
+
+ul {
+  float: right;
+}
+
+.nav {
+  margin-right: 1%;
+}
+.active {
+  color: darkslateblue !important;
+}
+
+@media only screen and (max-width: 1150px) {
+  li{
+    margin: 0 auto;
+  }
+  .title{
+   width:55%;
+ }
+}
+
+@media only screen and (max-width: 815px) {
+  .title, ul  li a{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 773px) {
+  .title, ul  li a{
+    text-align: center;
+  }
+ .title,ul{
+    width: 100%;
+  }
+} 
