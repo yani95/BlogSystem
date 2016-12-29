@@ -1,2 +1,2 @@
-"# Blog System" 
+# Blog System
 ## Angular 2 application
