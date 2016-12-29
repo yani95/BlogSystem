@@ -16,14 +16,7 @@ md-textarea {
   margin-top: 3%;
 }
 
-.desc {
-  /*width: 27%;*/
-  /*margin-left: 4%;*/
-  margin-top: 1%;
-  /*float: left;*/
-}
-
-.danger { 
+.danger {
   font-size: 12px;
   text-transform: uppercase;
   color: red;
@@ -34,7 +27,6 @@ md-textarea {
 
 .danger > span {
     clear: both;
-    margin-top: 6%;
     float: left;
 }
 

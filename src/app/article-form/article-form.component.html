@@ -5,31 +5,32 @@
 			<input md-input [formControl]="articleForm.controls['title']" placeholder="Title">
 			<div *ngIf="!articleForm.controls['title'].valid && articleForm.controls['title'].touched">
 				<div *ngIf="articleForm.controls['title'].errors.required" class="danger">
-					<span>Article title is required!</span>
+					<span>Article title is required!</span><br>
 				</div>
 			</div>
 		</md-input-container>
 
 		<div class="desc">
-			<md-textarea  class="description" cols="5" rows="4" [formControl]="articleForm.controls['description']" 
-				placeholder="Description"></md-textarea>
+			<md-textarea class="description" cols="5" rows="4" [formControl]="articleForm.controls['description']" placeholder="Description"></md-textarea>
 			<div *ngIf="!articleForm.controls['description'].valid && articleForm.controls['description'].touched">
-				<div *ngIf="articleForm.controls['description'].errors.required && articleForm.controls['description'].errors.maxlength" class="danger">
-					<span>Description should be less then {{constants.MAX_LENGHT_TEXT}} characters!</span>
+				<div *ngIf="articleForm.controls['description'].errors.required" class="danger"> 
+				<!--<div *ngIf="articleForm.controls['description'].errors.maxlength" class="danger">-->
+					<!--<span>Description should be less then {{constants.MAX_LENGHT_TEXT}} characters!</span>-->
+					<span>Description is required!</span>
 				</div>
 			</div>
-		</div>
+		</div><br>
 
 		<md-input-container>
-			<input md-input [formControl]="articleForm.controls['picture']" placeholder="Image">
+			<input md-input [formControl]="articleForm.controls['picture']" placeholder="Image url">
 			<div *ngIf="!articleForm.controls['picture'].valid && articleForm.controls['picture'].touched">
 				<div *ngIf="articleForm.controls['picture'].errors.invalidURL" class="danger">
 					<span>URL is not valid!</span>
 				</div>
 			</div>
-		</md-input-container>
+		</md-input-container><br>
 		<!--<input type="submit" class="btn btn-success right btnCreate" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"
 		/>-->
-		 <button md-raised-button class="SubmitBtn" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"> Submit </button>
+		<button md-raised-button class="SubmitBtn" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"> Submit </button>
 	</form>
 </md-card>

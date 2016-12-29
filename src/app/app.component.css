@@ -10,6 +10,7 @@ h1 {
     margin:  0px;
     margin-left: 5%;
 } 
+
 .navbar {
     position: relative;
     padding: 10px 0;
@@ -36,8 +37,19 @@ ul {
 .nav {
   margin-right: 1%;
 }
+
 .active {
   color: darkslateblue !important;
+}
+
+.md-input-underline {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    margin-top: 4px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    background-color: blueviolet !important;
 }
 
 @media only screen and (max-width: 1150px) {

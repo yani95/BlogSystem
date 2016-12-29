@@ -16,6 +16,7 @@ import { CommentModel } from './comment/comment.model';
 import { ArticleModel } from './article/article.model';
 import { ArticleFormComponent } from './article-form/article-form.component';
 import { FormBuilder,FormGroup,Validators,ReactiveFormsModule } from '@angular/forms';
+import { CommentFormComponent } from './comment-form/comment-form.component';
 
 @NgModule({
     imports: [
@@ -34,6 +35,7 @@ import { FormBuilder,FormGroup,Validators,ReactiveFormsModule } from '@angular/f
         CommentsListComponent,
         ArticleDetailsComponent,
         ArticleFormComponent,
+        CommentFormComponent,
     ],
     providers: [
        

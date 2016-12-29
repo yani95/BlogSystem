@@ -1,0 +1,17 @@
+<p class="formHead">Comment Form</p>
+<md-card>
+	<form [formGroup]="commentForm" (ngSubmit)="onSubmit(commentForm.value)">
+		<div class="description">
+			<md-textarea class="description" cols="5" rows="4"  [formControl]="commentForm.controls['text']" placeholder="Comment"></md-textarea>
+			<div *ngIf="!commentForm.controls['text'].valid && commentForm.controls['text'].touched">
+				<div *ngIf="commentForm.controls['text'].errors.required" class="danger">
+					<span>Comment is required!</span>
+				</div>
+			</div>			
+		</div>
+	
+		<!--<input type="submit" class="btn btn-success right btnCreate" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!commentForm.valid"
+		/>-->
+		<button md-raised-button class="SubmitBtn" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!commentForm.valid"> Submit </button>
+	</form>
+</md-card>

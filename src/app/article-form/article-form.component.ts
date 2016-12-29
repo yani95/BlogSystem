@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { ArticleModel, CategoriesEnum } from '../article/article.model';
-import * as constants from '../constants/constants';
+// import * as constants from '../constants/constants';
 import {UrlValidation} from '../custom-validators/custom-validators';
 
 
@@ -15,9 +15,10 @@ export class ArticleFormComponent {
   articleForm: FormGroup;
   defaultForm: FormGroup;
   btnName: string = "Add";
-  constants = constants;
+  // constants = constants;
 
   @Output() SubmitChanges = new EventEmitter<ArticleModel>();
+  // @Output() id = new EventEmitter<ArticleModel>();
 
   @Input() set selectedArticle(article: ArticleModel) {
     if (article) {
@@ -38,7 +39,8 @@ export class ArticleFormComponent {
     this.articleForm = fb.group
       ({
         'title': ['', Validators.compose([Validators.required])],
-        'description': ['', Validators.compose([Validators.required, Validators.maxLength(constants.MAX_LENGHT_TEXT)])],
+        'description': ['', Validators.compose([Validators.required])],
+        // , Validators.maxLength(500)]) constants.MAX_LENGHT_TEXT)
         'dateOfCreation': [''],
         'dateOfModification': [''],
         'picture': ['', Validators.compose([UrlValidation])],
@@ -67,6 +69,7 @@ export class ArticleFormComponent {
     this.articleForm.reset(this.defaultForm);
     this.btnName = 'Add';
     this.SubmitChanges.emit(newArticle);
+    // this.id.emit(value.id);
     console.log(value);
   }
 }
