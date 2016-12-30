@@ -1,0 +1,10 @@
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

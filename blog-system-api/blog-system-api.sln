@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogSystemAPI", "blog-system-api\BlogSystemAPI.csproj", "{FCAE15A2-0EED-4EF2-A49F-48836550FA39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{4756ED43-6D94-4FF2-B654-D2B3CDA9161F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{7A469B2C-0915-474A-B045-89F37D290276}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCAE15A2-0EED-4EF2-A49F-48836550FA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCAE15A2-0EED-4EF2-A49F-48836550FA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCAE15A2-0EED-4EF2-A49F-48836550FA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCAE15A2-0EED-4EF2-A49F-48836550FA39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4756ED43-6D94-4FF2-B654-D2B3CDA9161F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4756ED43-6D94-4FF2-B654-D2B3CDA9161F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4756ED43-6D94-4FF2-B654-D2B3CDA9161F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4756ED43-6D94-4FF2-B654-D2B3CDA9161F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A469B2C-0915-474A-B045-89F37D290276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A469B2C-0915-474A-B045-89F37D290276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A469B2C-0915-474A-B045-89F37D290276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A469B2C-0915-474A-B045-89F37D290276}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
