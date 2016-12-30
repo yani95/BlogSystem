@@ -9,8 +9,6 @@ namespace DataAccess.Repositories
 {
     public class CommentRepository : BaseRepository<CommentEntity>
     {
-        public CommentRepository(AppDbContext Context) : base(Context)
-        {
-        }
+
     }
 }

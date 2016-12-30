@@ -11,13 +11,13 @@ namespace DataAccess.Repositories
 {
     public abstract class BaseRepository<T> where T : BaseEntity, new()
     {
-        protected readonly AppDbContext Context;
+        protected readonly AppDbContext<T> Context;
 
         public DbSet<T> DbSet { get; set; }
 
-        public BaseRepository(AppDbContext Context)
+        public BaseRepository()
         {
-            this.Context = Context;
+            this.Context = new AppDbContext<T>();
             DbSet = Context.Set<T>();
         }
 

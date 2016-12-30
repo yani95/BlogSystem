@@ -1,4 +1,4 @@
-namespace BlogSystemAPI.Migrations
+namespace blog_system_api.Migrations
 {
     using DataAccess.Entities;
     using System;
@@ -6,15 +6,14 @@ namespace BlogSystemAPI.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.AppDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<blog_system_api.AppDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(DataAccess.AppDbContext context)
+        protected override void Seed(blog_system_api.AppDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -28,21 +27,6 @@ namespace BlogSystemAPI.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-
-            context.Articles.AddOrUpdate(
-                a => a.id,
-                new ArticleEntity()
-                {
-                    id = 1,
-                    title = "Hello world!",
-                    description = "Slow and curious blog!",
-                    dateOfCreation = DateTime.Now,
-                    dateOfModification = DateTime.Now,
-                    picture = "http://i.imgur.com/bhBcnOl.jpg",
-                    authorId = 1,
-                    category = ArticleEntity.CategoriesEnum.food
-                }
-            );
         }
     }
 }

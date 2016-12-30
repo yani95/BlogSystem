@@ -2,7 +2,7 @@ h1 {
     font-weight: bold; 
     font-family: 'Lobster'; 
     letter-spacing: 11px;
-    font-size: 50px;
+    font-size: 55px;
     text-shadow: 4px 4px 0px rgba(0,0,0,0.15);
     color: white;
     width: 70%;
@@ -13,20 +13,20 @@ h1 {
 
 .navbar {
     position: relative;
-    padding: 10px 0;
-    background-color:rgba(93,91,171,0.7);
+    padding: 20px 0;
+    background-color:rgb(147,112,219);
     margin-bottom: 60px;
 }
 
 li a {
-    color: white;
+    color: darkslateblue;
     font-size: 35px;
     font-family:'Lobster';
     margin-top: 5px;
 }
 
 li a:hover {
-    color: darkslateblue;
+    color: white;
     cursor: pointer;
 }
 
@@ -39,7 +39,7 @@ ul {
 }
 
 .active {
-  color: darkslateblue !important;
+  color: white !important;
 }
 
 .md-input-underline {

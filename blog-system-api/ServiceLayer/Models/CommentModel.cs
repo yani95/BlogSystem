@@ -19,7 +19,7 @@ namespace ServiceLayer.Models
 
         public int articleId { get; set; }
 
-        public virtual ArticleEntity article { get; set; }
+        //public virtual ArticleEntity article { get; set; }
 
         public DateTime dateOfCreation { get; set; }
     }

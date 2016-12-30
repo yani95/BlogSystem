@@ -7,3 +7,12 @@ C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\ServiceLaye
 C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\ServiceLayer\obj\Debug\ServiceLayer.csprojResolveAssemblyReference.cache
 C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\ServiceLayer\obj\Debug\ServiceLayer.dll
 C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\ServiceLayer\obj\Debug\ServiceLayer.pdb
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\bin\Debug\ServiceLayer.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\bin\Debug\ServiceLayer.pdb
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\bin\Debug\DataAccess.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\bin\Debug\EntityFramework.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\bin\Debug\DataAccess.pdb
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\bin\Debug\EntityFramework.xml
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\obj\Debug\ServiceLayer.csprojResolveAssemblyReference.cache
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\obj\Debug\ServiceLayer.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\ServiceLayer\obj\Debug\ServiceLayer.pdb

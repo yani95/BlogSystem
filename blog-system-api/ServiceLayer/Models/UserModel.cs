@@ -1,15 +1,19 @@
-﻿using System;
+﻿using DataAccess.Entities;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Entities
+namespace ServiceLayer.Models
 {
-    public class UserEntity : BaseEntity
+    public class UserModel : BaseModel
     {
+        [Required(ErrorMessage = "Username is required!")]
         public string username { get; set; }
 
+        [Required(ErrorMessage = "Password is required!")]
         public string password { get; set; }
 
         public string firstName { get; set; }
@@ -19,5 +23,6 @@ namespace DataAccess.Entities
         public bool isAdmin { get; set; }
 
         public string picture { get; set; }
+
     }
 }

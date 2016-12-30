@@ -9,8 +9,5 @@ namespace DataAccess.Repositories
 {
     public class UserRepository : BaseRepository<UserEntity>
     {
-        public UserRepository(AppDbContext Context) : base(Context)
-        {
-        }
     }
 }

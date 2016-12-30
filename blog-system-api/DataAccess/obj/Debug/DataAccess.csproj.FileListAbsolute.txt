@@ -8,3 +8,12 @@ C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\
 C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\Piter\Documents\Visual Studio 2015\Projects\blog-system-api\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\obj\Debug\DataAccess.pdb
