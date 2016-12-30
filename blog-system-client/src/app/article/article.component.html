@@ -1,3 +1,18 @@
-<p>
-  article works!
-</p>
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" [src]="value.picture" alt="img">
+
+    <div class="card-block">
+      <h3 class="card-title">{{ value.title }} - {{ value.author }}</h3>
+      <h4>{{ value.description }}</h4>      
+      <div class="details-link">
+         <a [routerLink]="['/article/',value.id]" routerLinkActive="active" (click)="onArticleDetails()"><span>Full details</span></a>
+      </div>
+    </div>
+
+    <div (click)="onArticleDelete()" class="item itemRemove">
+      <i class="glyphicon glyphicon-remove"></i>
+    </div>
+
+  </div>
+</div>

@@ -1,3 +1,5 @@
-<p>
-  articles-list works!
-</p>
+<div class="wrapper">
+  <div *ngFor="let article of articles; let i=index" class="oneItem" [class.disabled]="i+1==selectedArticleIndex" >
+		<article [value]="article" (valueChange)="onArticleChange($event)" (click)="onEdit(article)" (removeArticle)="onRemove(article.id)"></article>
+  </div>
+</div>

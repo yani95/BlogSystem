@@ -1,0 +1,5 @@
+<h1 class="title">
+  {{title}}
+</h1>
+<article-form [selectedArticle]='selectedArticle' (SubmitChanges)="onChangesSubmitted($event)"></article-form>
+<articles-list [articles]="articles" (removeItem)="onRemove($event)" [selectedArticleIndex]="selectedArticleIndex" (selectArticle)="onArticleSelected($event)" (deleteArticle)="onArticleDelete($event)"></articles-list>
