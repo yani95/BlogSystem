@@ -1,0 +1,113 @@
+h3 {
+    font-family: Indian Script;
+    font-size: 44px;
+    color: #a50200;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+     margin:0;
+}
+
+.actorYears {
+    font-weight: 700;
+}
+
+.card-group {
+  text-align: center;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.card-group img {
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.movies {
+  margin-bottom: 20px;
+}
+
+.card-movies {
+   font-weight: 700;
+   color: #333;
+}
+
+span {
+    color: #a50200;
+    position: relative;
+    top: 0;
+}
+
+.image {
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.item {
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 30px;
+  box-shadow: -5px -4px 111px -15px rgba(0,0,0,0.75);
+  position: relative;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.name {
+  font-family: Indian Script;
+  font-weight: 700;
+  color: #a50200;
+  font-size: 45px;
+}
+
+.card {
+    min-height: 419px;
+    width: 100%;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.card-img-top {
+   height: 350px;
+   width: 300px;
+}
+
+.card-actors {
+   font-weight: 700;
+   color: #333;
+}
+
+.actors {
+  margin-bottom:13px;
+}
+
+.card-text {
+    min-height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemRemove {
+  display: none;
+}
+
+.btn-success {
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 20px;
+  padding: 11px;
+  margin-bottom:30px;
+  border: none;
+}
+
+.oneItem {
+  width: 27% !important;
+}

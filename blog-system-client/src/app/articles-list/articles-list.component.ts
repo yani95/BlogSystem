@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { ArticleModel } from '../article/article.model';
+import { ArticleService } from '../services/article.service';
+
 
 @Component({
-  selector: 'app-articles-list',
+  selector: 'articles-list',
   templateUrl: './articles-list.component.html',
   styleUrls: ['./articles-list.component.css']
 })
-export class ArticlesListComponent implements OnInit {
 
-  constructor() { }
+export class ArticlesListComponent {
 
-  ngOnInit() {
+  @Input() articles: ArticleModel[];
+  @Input() selectedArticleIndex: number;
+
+  @Output() selectArticle = new EventEmitter<ArticleModel>();
+  @Output() deleteArticle = new EventEmitter<number>();
+
+  onEdit(article: ArticleModel)
+  {
+    this.selectArticle.emit(article);
   }
 
+  onRemove(articleIndex: number)
+  {
+    this.deleteArticle.emit(articleIndex);
+  }
 }

@@ -1,3 +1,27 @@
-<p>
-  article-details works!
-</p>
+<div *ngIf="article">
+	<div class="card-group">
+		<div class="card">
+			<h1 class="name">{{article.title}}'s details!</h1>
+
+			<div class="item">
+				<img class="card-img-top" [src]="article.picture" alt="img">
+
+				<div class="card-block">
+					<h3>{{ article.title }}</h3>
+					<h4 class="actorYears">{{article.dateOfCreation}} - {{article.description}} </h4>
+
+					<!--<div class="movies">
+						<span>Movies:</span>
+						<span *ngFor="let a of article.movies">
+           <span class="card-movies" > {{ a.movieTitle }} </span> /
+						</span>
+					</div>-->
+
+				</div>
+			</div>
+
+			<button (click)="goToArticles()" class="btn btn-success">Back to articles</button>
+		</div>
+	</div>
+	<!--<articles-list [myComments]="article.comments"></articles-list>-->
+</div>
