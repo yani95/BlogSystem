@@ -6,7 +6,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'articles', pathMatch: 'full' },
   { path: 'articles', component: ArticlesControllerComponent }, 
   { path: 'article/:id', component: ArticleDetailsComponent },
-  { path: '**', redirectTo: '' } 
+  { path: '**', redirectTo: 'articles' } 
 ];
 
 export const routing = RouterModule.forRoot(routes);

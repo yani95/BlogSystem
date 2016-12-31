@@ -1,0 +1,64 @@
+body {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+}
+
+.oneItem {
+  text-align: center;
+  width: 28%;
+  display: inline-block;
+  margin: 30px;
+  margin-top: 80px;
+  box-shadow: -5px -4px 111px -15px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.wrapper {
+  width: 68%;
+  margin: 0 auto;
+}
+
+.disabled:after {
+  position: absolute;
+  content: 'Editing';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.7;
+  font-family: Indian Script;
+  color: #a50200;
+  font-size: 60px;
+  line-height: 8;
+}
+
+.oneItem, .disabled:after {
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1670px) {
+  .wrapper{
+    width: 35%;
+  }
+  .oneItem{
+    width: 100%;
+    margin-left:0;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  .wrapper{
+    width:50%;
+  }
+}
+
+@media only screen and (max-width: 753px) {
+  .wrapper{
+    width:60%;
+  }
+}

@@ -23,13 +23,16 @@ md-textarea {
   /*float: left;*/
 }
 
+/*md-input-container.md-input-has-placeholder {
+     margin-top: 5%;
+}*/
+
 .danger { 
   font-size: 12px;
   text-transform: uppercase;
   color: red;
   position: absolute;
   margin-left: 4%;
-  /*width: 100%;*/
 }
 
 .danger > span {
@@ -68,4 +71,4 @@ md-card {
     border-top-width: 1px;
     border-top-style: solid;
     color: purple;
-}
+}    

@@ -5,6 +5,7 @@ h3 {
     margin: 0px;
     margin-bottom: 20px;
 }
+
 .card-title {
      margin:0;
 }
@@ -33,7 +34,6 @@ h3 {
 }
 
 span {
-    color: #a50200;
     position: relative;
     top: 0;
 }
@@ -78,11 +78,12 @@ span {
 }
 
 .btn-success {
+  margin-top: 30px;
   background-color: purple;
   color: white;
   font-size: 23px;
   border-radius: 50px;
-  padding: 21px;
+  padding: 15px;
   margin-bottom:30px;
   border: none;
 }

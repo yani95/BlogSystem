@@ -2,7 +2,6 @@ import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { ArticleModel } from '../article/article.model';
 import { ArticleService } from '../services/article.service';
 
-
 @Component({
   selector: 'articles-list',
   templateUrl: './articles-list.component.html',

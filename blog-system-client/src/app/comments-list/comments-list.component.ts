@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { CommentModel } from '../comment/comment.model';
+import { CommentService } from '../services/comment.service';
 
 @Component({
-  selector: 'app-comments-list',
+  selector: 'comments-list',
   templateUrl: './comments-list.component.html',
   styleUrls: ['./comments-list.component.css']
 })
-export class CommentsListComponent implements OnInit {
 
-  constructor() { }
+export class CommentsListComponent {
 
-  ngOnInit() {
+  @Input() comments: CommentModel[];
+  @Input() selectedCommentIndex: number;
+
+  @Output() selectComment = new EventEmitter<CommentModel>();
+  @Output() deleteComment = new EventEmitter<number>();
+
+  onEdit(comment: CommentModel)
+  {
+    this.selectComment.emit(comment);
   }
 
+  onRemove(commentIndex: number)
+  {
+    this.deleteComment.emit(commentIndex);
+  }
 }

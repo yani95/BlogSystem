@@ -1,3 +1,11 @@
-<p>
-  comment works!
-</p>
+<div class="card-group">
+  <div class="card">  
+    <div class="card-block">
+      <h4 class="card-title">{{ value.text }}</h4>      
+    </div>
+
+    <div (click)="onCommentDelete()" class="item itemRemove">
+      <i class="glyphicon glyphicon-remove"></i>
+    </div>
+  </div>
+</div>

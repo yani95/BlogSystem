@@ -5,7 +5,7 @@
 			<md-textarea class="description" cols="5" rows="4"  [formControl]="commentForm.controls['text']" placeholder="Comment"></md-textarea>
 			<div *ngIf="!commentForm.controls['text'].valid && commentForm.controls['text'].touched">
 				<div *ngIf="commentForm.controls['text'].errors.required" class="danger">
-					<span>Comment is required!</span>
+					<span id="comment">Comment is required!</span>
 				</div>
 			</div>			
 		</div>

@@ -4,6 +4,6 @@ export class CommentModel {
         public text: string,
         public authorId: number, 
         public dateOfCreation: any, 
-        public article: string
+        public articleId: number
     ){  }
 }

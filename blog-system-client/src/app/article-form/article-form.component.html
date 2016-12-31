@@ -5,10 +5,10 @@
 			<input md-input [formControl]="articleForm.controls['title']" placeholder="Title">
 			<div *ngIf="!articleForm.controls['title'].valid && articleForm.controls['title'].touched">
 				<div *ngIf="articleForm.controls['title'].errors.required" class="danger">
-					<span>Article title is required!</span><br>
+					<span>Article title is required!</span>
 				</div>
 			</div>
-		</md-input-container>
+		</md-input-container><br>
 
 		<div class="desc">
 			<md-textarea class="description" cols="5" rows="4" [formControl]="articleForm.controls['description']" placeholder="Description"></md-textarea>
@@ -29,14 +29,16 @@
 				</div>
 			</div>
 		</md-input-container><br>
+
 		<md-input-container>
 			<input md-input [formControl]="articleForm.controls['category']" placeholder="Category">
 			<div *ngIf="!articleForm.controls['category'].valid && articleForm.controls['category'].touched">
 				<div *ngIf="articleForm.controls['category'].errors.required" class="danger">
-					<span>Category is not required!</span>
+					<span>Category is required!</span>
 				</div>
 			</div>
 		</md-input-container><br>
+
 		<!--<input type="submit" class="btn btn-success right btnCreate" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"
 		/>-->
 		<button md-raised-button class="SubmitBtn" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"> Submit </button>
