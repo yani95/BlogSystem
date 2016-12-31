@@ -12,7 +12,7 @@ export class ArticleComponent {
   @Output() removeArticle = new EventEmitter();
 
   onArticleDelete(articleIndex: number) {
-    // event.stopPropagation();
+    event.stopPropagation();
     this.removeArticle.emit(articleIndex);
   }
   

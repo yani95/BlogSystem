@@ -54,7 +54,7 @@ export class ArticleFormComponent {
     let ImgUrl;
 
     if (value.picture == '' || value.picture == null) {
-      ImgUrl = 'https://ugotalksalot.files.wordpress.com/2016/06/no-thumb.jpg';
+      ImgUrl = 'http://byronbodyandsoul.com/wp-content/themes/bbs/images/no-image-available.png';
     }
     else {
       if (value.picture.startsWith("http://") || value.picture.startsWith("https://") || value.picture.startsWith("//")) {

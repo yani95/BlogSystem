@@ -8,14 +8,8 @@
 
 				<div class="card-block">
 					<h3>{{ article.title }}</h3>
-					<h4 class="actorYears">{{article.dateOfCreation}} - {{article.description}} </h4>
-
-					<!--<div class="movies">
-						<span>Movies:</span>
-						<span *ngFor="let a of article.movies">
-           <span class="card-movies" > {{ a.movieTitle }} </span> /
-						</span>
-					</div>-->
+					<h4 class="actorYears">{{article.dateOfCreation | date}} </h4>
+					<p class="card-text">{{article.description}}</p> 
 
 				</div>
 			</div>

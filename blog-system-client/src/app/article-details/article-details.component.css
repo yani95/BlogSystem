@@ -1,11 +1,10 @@
 h3 {
-    font-family: Indian Script;
+    font-family: 'Lobster';
     font-size: 44px;
-    color: #a50200;
+    color: purple;
     margin: 0px;
     margin-bottom: 20px;
 }
-
 .card-title {
      margin:0;
 }
@@ -16,7 +15,7 @@ h3 {
 
 .card-group {
   text-align: center;
-  width: 350px;
+  width: 850px;
   margin: 0 auto;
 }
 
@@ -26,10 +25,6 @@ h3 {
   border-top-right-radius: 20px;
   width: 100%;
   margin-bottom: 15px;
-}
-
-.movies {
-  margin-bottom: 20px;
 }
 
 .card-movies {
@@ -43,14 +38,6 @@ span {
     top: 0;
 }
 
-.image {
-  text-align: center;
-  border-radius: 25px;
-  padding: 20px;
-  font-size: 34px;
-  font-weight: 900;
-}
-
 .item {
   border-radius: 25px;
   display: inline-block;
@@ -62,10 +49,10 @@ span {
 }
 
 .name {
-  font-family: Indian Script;
+  font-family: 'Lobster';
   font-weight: 700;
-  color: #a50200;
-  font-size: 45px;
+  color: purple;
+  font-size: 55px;
 }
 
 .card {
@@ -76,17 +63,8 @@ span {
 }
 
 .card-img-top {
-   height: 350px;
+   height: 550px;
    width: 300px;
-}
-
-.card-actors {
-   font-weight: 700;
-   color: #333;
-}
-
-.actors {
-  margin-bottom:13px;
 }
 
 .card-text {
@@ -100,10 +78,11 @@ span {
 }
 
 .btn-success {
-  background-color: #5cb85c;
+  background-color: purple;
   color: white;
-  border-radius: 20px;
-  padding: 11px;
+  font-size: 23px;
+  border-radius: 50px;
+  padding: 21px;
   margin-bottom:30px;
   border: none;
 }

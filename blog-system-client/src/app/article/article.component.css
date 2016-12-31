@@ -1,20 +1,9 @@
-.image {
+.card-group{
   text-align: center;
-  border-radius: 25px;
-  padding: 20px;
-  font-size: 34px;
-  font-weight: 900;
-}
-
-.card-group img {
-  text-align: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  width: 100%;
 }
 
 h3 {
-    font-family: Indian Script;
+    font-family: 'Lobster';
     font-size: 44px;
     color: #a50200;
     margin: 0px;
@@ -30,6 +19,7 @@ h4 {
     width: 100%;
     display: inline-block;
     font-weight: 700;
+      border: 0px;
 }
 
 .itemRemove {
@@ -67,6 +57,10 @@ span {
 .card-img-top {
    height: 350px;
    width: 300px;
+   border-top-left-radius: 20px!important;
+   border-top-right-radius: 20px!important;
+   width: 100%;
+
 }
 
 a {

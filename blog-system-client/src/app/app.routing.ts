@@ -1,10 +1,10 @@
 ﻿import { Routes, RouterModule } from '@angular/router';
-import { ArticlesListComponent } from './articles-list/articles-list.component';
+import { ArticlesControllerComponent } from './articles-controller/articles-controller.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'articles', pathMatch: 'full' },
-  { path: 'articles', component: ArticlesListComponent }, 
+  { path: 'articles', component: ArticlesControllerComponent }, 
   { path: 'article/:id', component: ArticleDetailsComponent },
   { path: '**', redirectTo: '' } 
 ];

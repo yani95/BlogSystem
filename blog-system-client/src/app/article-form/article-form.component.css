@@ -1,5 +1,5 @@
 md-input-container {
-    width: 27%;
+    width: 47%;
     margin-left: 4%;
     margin-top: 1%;
 }
@@ -10,7 +10,7 @@ md-textarea {
 }
 
 .SubmitBtn {
-  background-color: mediumpurple;
+  background-color: rgba(102,0,102,0.7);
   color: #fff;
   margin-left: 4%;
   margin-top: 3%;
@@ -67,5 +67,5 @@ md-card {
     margin-top: 4px;
     border-top-width: 1px;
     border-top-style: solid;
-    color: blueviolet;
+    color: purple;
 }
