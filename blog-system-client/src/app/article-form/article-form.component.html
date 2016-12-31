@@ -29,6 +29,14 @@
 				</div>
 			</div>
 		</md-input-container><br>
+		<md-input-container>
+			<input md-input [formControl]="articleForm.controls['category']" placeholder="Category">
+			<div *ngIf="!articleForm.controls['category'].valid && articleForm.controls['category'].touched">
+				<div *ngIf="articleForm.controls['category'].errors.required" class="danger">
+					<span>Category is not required!</span>
+				</div>
+			</div>
+		</md-input-container><br>
 		<!--<input type="submit" class="btn btn-success right btnCreate" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"
 		/>-->
 		<button md-raised-button class="SubmitBtn" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"> Submit </button>

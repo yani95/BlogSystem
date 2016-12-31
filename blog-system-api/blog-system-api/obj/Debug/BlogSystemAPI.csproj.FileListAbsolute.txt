@@ -124,3 +124,5 @@ C:\Users\Megaira\BlogSystem\blog-system-api\blog-system-api\bin\System.Web.Mvc.x
 C:\Users\Megaira\BlogSystem\blog-system-api\blog-system-api\obj\Debug\BlogSystemAPI.csprojResolveAssemblyReference.cache
 C:\Users\Megaira\BlogSystem\blog-system-api\blog-system-api\obj\Debug\blog-system-api.dll
 C:\Users\Megaira\BlogSystem\blog-system-api\blog-system-api\obj\Debug\blog-system-api.pdb
+C:\Users\Megaira\BlogSystem\blog-system-api\blog-system-api\bin\System.Web.Http.WebHost.dll
+C:\Users\Megaira\BlogSystem\blog-system-api\blog-system-api\bin\System.Web.Http.WebHost.xml

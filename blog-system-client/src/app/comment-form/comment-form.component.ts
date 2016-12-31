@@ -28,7 +28,7 @@ export class CommentFormComponent {
   }  
 
     onSubmit(value: any): void {
-    let newComment = new CommentModel(value.id, value.text, value.author, new Date(), null); // ArticleModel.id from details
+    let newComment = new CommentModel(value.id, value.text, 1, new Date(), null); // ArticleModel.id from details
     this.commentForm.reset(this.defaultForm);
     this.btnName = 'Add';
     this.SubmitChanges.emit(newComment);

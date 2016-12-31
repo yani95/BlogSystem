@@ -8,7 +8,7 @@ import {ResponseMSG} from './response.model';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class MovieService
+export class CommentService
 {
 
   constructor(private http: Http)

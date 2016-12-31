@@ -2,7 +2,7 @@ export class CommentModel {
     constructor(
         public id: number,
         public text: string,
-        public author: string, 
+        public authorId: number, 
         public dateOfCreation: any, 
         public article: string
     ){  }

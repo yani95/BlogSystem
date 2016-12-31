@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArticleService.cs" />
+    <Compile Include="AuthenticationService.cs" />
     <Compile Include="BaseService.cs" />
     <Compile Include="CommentService.cs" />
     <Compile Include="Models\ArticleModel.cs" />

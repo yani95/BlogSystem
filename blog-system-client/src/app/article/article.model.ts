@@ -19,7 +19,7 @@ export class ArticleModel {
         public dateOfCreation: any, 
         public dateOfModification: any, 
         public picture: string, 
-        public author: string, 
+        public authorId: number, 
         public category: CategoriesEnum )
   {  }
 }

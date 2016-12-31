@@ -30,7 +30,7 @@ export class ArticleFormComponent {
         dateOfCreation: article.dateOfCreation,
         dateOfModification: article.dateOfModification,
         picture: article.picture,
-        author: article.author,
+        authorId: article.authorId,
         category: String(article.category)
       });
     }
@@ -45,7 +45,7 @@ export class ArticleFormComponent {
         'dateOfCreation': [''],
         'dateOfModification': [''],
         'picture': ['', Validators.compose([UrlValidation])],
-        'author': [''],
+        'authorId': [''],
         'category':  [String(CategoriesEnum.other)]
       });
     this.defaultForm = this.articleForm.value;
@@ -53,20 +53,20 @@ export class ArticleFormComponent {
   onSubmit(value: any): void {
     let ImgUrl;
 
-    if (value.urlImg == '' || value.urlImg == null) {
+    if (value.picture == '' || value.picture == null) {
       ImgUrl = 'https://ugotalksalot.files.wordpress.com/2016/06/no-thumb.jpg';
     }
     else {
-      if (value.urlImg.startsWith("http://") || value.urlImg.startsWith("https://") || value.urlImg.startsWith("//")) {
-        ImgUrl = value.urlImg;
+      if (value.picture.startsWith("http://") || value.picture.startsWith("https://") || value.picture.startsWith("//")) {
+        ImgUrl = value.picture;
       }
       else {
-        ImgUrl = "//" + value.urlImg;
+        ImgUrl = "//" + value.picture;
       }
     }
 
     let id = this.selectedArticle ? this.selectedArticle.id : 0;
-    let newArticle = new ArticleModel(id, value.title, value.description, value.dateOfCreation,value.dateOfModification, ImgUrl, value.author, value.category);
+    let newArticle = new ArticleModel(id, value.title, value.description,new Date().toLocaleString(),new Date().toLocaleString(), ImgUrl, 1, value.category);
     this.articleForm.reset(this.defaultForm);
     this.btnName = 'Add';
     this.SubmitChanges.emit(newArticle);

@@ -18,6 +18,9 @@ import { ArticleFormComponent } from './article-form/article-form.component';
 import { FormBuilder,FormGroup,Validators,ReactiveFormsModule } from '@angular/forms';
 import { CommentFormComponent } from './comment-form/comment-form.component';
 import { ArticlesControllerComponent } from './articles-controller/articles-controller.component';
+import { ArticleService } from './services/article.service';
+import { CommentService } from './services/comment.service';
+
 
 @NgModule({
     imports: [
@@ -40,7 +43,8 @@ import { ArticlesControllerComponent } from './articles-controller/articles-cont
         ArticlesControllerComponent,
     ],
     providers: [
-       
+       ArticleService,
+       CommentService
     ],
     bootstrap: [AppComponent]
 })

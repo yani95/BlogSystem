@@ -72,3 +72,9 @@ span {
 a {
   text-decoration: none !important;
 }
+
+.card-text {
+    min-height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -3,8 +3,8 @@
     <img class="card-img-top" [src]="value.picture" alt="img">
 
     <div class="card-block">
-      <h3 class="card-title">{{ value.title }} - {{ value.author }}</h3>
-      <h4>{{ value.description }}</h4>      
+      <h4 class="card-title">{{ value.title }} - {{ value.authorId }}</h4>
+      <p class="card-text"> {{ value.description }}</p>     
       <div class="details-link">
          <a [routerLink]="['/article/',value.id]" routerLinkActive="active" (click)="onArticleDetails()"><span>Full details</span></a>
       </div>
