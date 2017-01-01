@@ -27,3 +27,4 @@ C:\Users\Piter\BlogSystem\blog-system-api\DataAccess\bin\Debug\EntityFramework.S
 C:\Users\Piter\BlogSystem\blog-system-api\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Piter\BlogSystem\blog-system-api\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Piter\BlogSystem\blog-system-api\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Megaira\BlogSystem\blog-system-api\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

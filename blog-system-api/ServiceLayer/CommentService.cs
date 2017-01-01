@@ -22,9 +22,9 @@ namespace ServiceLayer
             item.id = model.id;
             item.text = model.text;
             item.authorId = model.authorId;
-            item.author = model.author;
+            //item.author = model.author;
             item.articleId = model.articleId;
-           // item.article = model.article;
+            // item.article = model.article;
             item.dateOfCreation = model.dateOfCreation;
         }
 
@@ -33,7 +33,7 @@ namespace ServiceLayer
             model.id = item.id;
             model.text = item.text;
             model.authorId = item.authorId;
-            model.author = item.author;
+            //model.author = item.author;
             model.articleId = item.articleId;
             //model.article = item.article;
             model.dateOfCreation = item.dateOfCreation;

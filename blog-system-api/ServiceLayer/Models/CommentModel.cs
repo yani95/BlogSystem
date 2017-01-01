@@ -15,7 +15,7 @@ namespace ServiceLayer.Models
 
         public int authorId { get; set; }
 
-        public virtual UserEntity author { get; set; }
+        //public virtual UserEntity author { get; set; }
 
         public int articleId { get; set; }
 
