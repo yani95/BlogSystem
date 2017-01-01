@@ -16,8 +16,10 @@ namespace ServiceLayer.Models
         [Required(ErrorMessage = "Password is required!")]
         public string password { get; set; }
 
+        [Required(ErrorMessage = "first Name is required!")]
         public string firstName { get; set; }
 
+        [Required(ErrorMessage = "last Name is required!")]
         public string lastName { get; set; }
 
         public bool isAdmin { get; set; }

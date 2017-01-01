@@ -1,0 +1,51 @@
+<p class="formHead">Register</p>
+<md-card>
+	<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+		<md-input-container>
+			<input md-input [formControl]="userForm.controls['username']" placeholder="Username">
+			<div *ngIf="!userForm.controls['username'].valid && userForm.controls['username'].touched">
+				<div *ngIf="userForm.controls['username'].errors.required" class="danger">
+					<span>Username is required!</span>
+				</div>
+			</div>
+		</md-input-container><br>
+
+		<md-input-container>
+			<input md-input [formControl]="userForm.controls['password']" type="password" placeholder="Password">
+			<div *ngIf="!userForm.controls['password'].valid && userForm.controls['password'].touched">
+				<div *ngIf="userForm.controls['password'].errors.required" class="danger">
+					<span>Password is required!</span>
+				</div>
+			</div>
+		</md-input-container><br>
+
+		<md-input-container>
+			<input md-input [formControl]="userForm.controls['firstName']" placeholder="First name">
+			<div *ngIf="!userForm.controls['firstName'].valid && userForm.controls['firstName'].touched">
+				<div *ngIf="userForm.controls['firstName'].errors.required" class="danger">
+					<span>First name is required!</span>
+				</div>
+			</div>
+		</md-input-container><br>
+
+    <md-input-container>
+			<input md-input [formControl]="userForm.controls['lastName']" placeholder="Last name">
+			<div *ngIf="!userForm.controls['lastName'].valid && userForm.controls['lastName'].touched">
+				<div *ngIf="userForm.controls['lastName'].errors.required" class="danger">
+					<span>Last name is required!</span>
+				</div>
+			</div>
+		</md-input-container><br>
+
+    <md-input-container>
+			<input md-input [formControl]="userForm.controls['picture']" placeholder="Image url">
+			<div *ngIf="!userForm.controls['picture'].valid && userForm.controls['picture'].touched">
+				<div *ngIf="userForm.controls['picture'].errors.invalidURL" class="danger">
+					<span>URL is not valid!</span>
+				</div>
+			</div>
+		</md-input-container><br>
+
+		<button md-raised-button class="SubmitBtn" [disabled]="!userForm.valid"> Submit </button>
+	</form>
+</md-card>

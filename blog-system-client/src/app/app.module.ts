@@ -19,8 +19,11 @@ import { FormBuilder,FormGroup,Validators,ReactiveFormsModule } from '@angular/f
 import { CommentFormComponent } from './comment-form/comment-form.component';
 import { ArticlesControllerComponent } from './articles-controller/articles-controller.component';
 import { CommentsControllerComponent } from './comments-controller/comments-controller.component';
+import { UserService } from './services/user.service';
 import { ArticleService } from './services/article.service';
 import { CommentService } from './services/comment.service';
+import { UserFormComponent } from './user-form/user-form.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 @NgModule({
@@ -43,10 +46,13 @@ import { CommentService } from './services/comment.service';
         CommentFormComponent,
         ArticlesControllerComponent,
         CommentsControllerComponent,
+        UserFormComponent,
+        UserDetailsComponent,
     ],
     providers: [
        ArticleService,
-       CommentService
+       CommentService,
+       UserService
     ],
     bootstrap: [AppComponent]
 })

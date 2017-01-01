@@ -19,5 +19,7 @@ namespace DataAccess.Entities
         public bool isAdmin { get; set; }
 
         public string picture { get; set; }
+
+        public virtual List<ArticleEntity> articles { get; set; }
     }
 }
