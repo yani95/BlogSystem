@@ -24,7 +24,8 @@ import { ArticleService } from './services/article.service';
 import { CommentService } from './services/comment.service';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-
+import { ArticlesFilterPipe } from './pipes/articles-filter.pipe';
+import { ArticlesSortingPipe } from './pipes/articles-sorting.pipe';
 
 @NgModule({
     imports: [
@@ -48,6 +49,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
         CommentsControllerComponent,
         UserFormComponent,
         UserDetailsComponent,
+        ArticlesSortingPipe,
+        ArticlesFilterPipe
     ],
     providers: [
        ArticleService,

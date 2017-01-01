@@ -10,6 +10,34 @@ import { ArticleService } from '../services/article.service';
 
 export class ArticlesListComponent {
 
+  // articles: ArticleModel[];
+  filterText: string;
+  sortingProperties: string[];
+  sortingProperty: string;
+  order: string;
+
+  constructor(private articleService: ArticleService) { }
+
+  ngOnInit() {          
+      this.sortingProperties = ['category', 'title'];
+      this.sortingProperty = 'title';
+      this.order = 'desc';
+      this.articleService.GetAll()
+          .subscribe((response:any) => this.articles = response);
+  }
+
+  onFilterInput(e: any) {
+      this.filterText = e.target.value;
+  }
+
+  onSortChange(e: any) {
+      this.sortingProperty = e.target.value;
+  }
+
+  onOrderChange(e: any) {
+      this.order = e.target.value;
+  }
+
   @Input() articles: ArticleModel[];
   @Input() selectedArticleIndex: number;
 
@@ -24,5 +52,5 @@ export class ArticlesListComponent {
   onRemove(articleIndex: number)
   {
     this.deleteArticle.emit(articleIndex);
-  }
+  }  
 }

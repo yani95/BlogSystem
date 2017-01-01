@@ -1,5 +1,31 @@
+<div class="wrap-pipes">
+  <span class="input-group-addon" id="basic-addon1">Search: </span>
+  <input type="text" class="form-control" placeholder="Search by title" (input)="onFilterInput($event)" id="search" />
+
+  <div class="form-group col-md-4 col-md-offset-1" >
+        <label for="sel1">Sort:</label>
+        <select 
+            class="form-control" 
+            id="sel1" 
+            (change)="onSortChange($event)">
+            <option *ngFor="let prop of sortingProperties" [selected]="sortingProperty === prop" value="{{prop}}">{{prop}}</option>
+        </select>
+    </div>
+
+    <div class="form-group col-md-4 col-md-offset-1">
+        <label for="sel2">Order:</label>
+        <select 
+            class="form-control" 
+            id="sel2" 
+            (change)="onOrderChange($event)">
+            <option [selected]="order === 'asc'" value="asc">Ascending</option>
+            <option [selected]="order === 'desc'" value="desc">Descending</option>
+        </select>
+    </div>
+</div>
+
 <div class="wrapper">
-  <div *ngFor="let article of articles; let i=index" class="oneItem" [class.disabled]="i+1==selectedArticleIndex" >
-		<article [value]="article" (valueChange)="onArticleChange($event)" (click)="onEdit(article)" (removeArticle)="onRemove(article.id)"></article>
+  <div *ngFor="let article of articles | articlesFilter:filterText | articlesSort:[sortingProperty, order]; let i=index" class="oneItem" [class.disabled]="i+1==selectedArticleIndex" >
+    <article [value]="article" (valueChange)="onArticleChange($event)" (click)="onEdit(article)" (removeArticle)="onRemove(article.id)"></article>
   </div>
 </div>

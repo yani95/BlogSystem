@@ -22,6 +22,21 @@ body {
   padding-left: 40px;
 }
 
+.wrap-pipes {
+  width: 60%;
+  margin-top: 120px !important;
+  margin: 0 auto;
+}
+
+#search {
+  margin-bottom: 30px;
+  padding: 22px;
+}
+
+#basic-addon1 {
+  padding: 9px;
+}
+
 .disabled:after {
   position: absolute;
   content: 'Editing';
