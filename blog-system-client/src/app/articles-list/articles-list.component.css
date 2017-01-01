@@ -46,8 +46,9 @@ body {
   height: 100%;
   background: white;
   opacity: 0.7;
-  font-family: Indian Script;
-  color: #a50200;
+  font-weight: bold;
+  font-family: 'Lobster';
+  color: purple;
   font-size: 60px;
   line-height: 8;
 }
@@ -58,7 +59,7 @@ body {
 
 @media only screen and (max-width: 1670px) {
   .wrapper{
-    width: 35%;
+    width: 36%;
   }
   .oneItem{
     width: 100%;

@@ -19,11 +19,11 @@ h4 {
     width: 100%;
     display: inline-block;
     font-weight: 700;
-      border: 0px;
+    border: 0px;
 }
 
 .itemRemove {
-    color: red;
+    color:#c192ca;
     border-top-right-radius: 97;
     position: absolute;
     right: 0;

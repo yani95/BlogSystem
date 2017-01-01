@@ -16,29 +16,35 @@ md-textarea {
   margin-top: 3%;
 }
 
-.desc {
-  /*width: 27%;*/
-  /*margin-left: 4%;*/
-  margin-top: 1%;
-  /*float: left;*/
+form {
+    color: #9a9393;
 }
 
-/*md-input-container.md-input-has-placeholder {
-     margin-top: 5%;
-}*/
+.desc {
+  margin-top: 1%;
+}
+
 
 .danger { 
   font-size: 12px;
   text-transform: uppercase;
   color: red;
   position: absolute;
-  margin-left: 4%;
+  margin-left: 0px;
+}
+
+.danger-desc {
+    margin-left: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: red;
+    position: absolute; 
 }
 
 .danger > span {
     clear: both;
     margin-top: 6%;
-    float: left;
+    float: left;    
 }
 
 md-card {

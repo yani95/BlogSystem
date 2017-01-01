@@ -1,7 +1,15 @@
 <md-card>  
-    <h4 class="card-title">{{ value.text }}</h4>
-    
+    <!--<img class="card-img-top" [src]="value.picture" alt="img">    -->
+    <img src="http://i.imgur.com/HQ3YU7n.gif" alt="person">
+
+    <h3 class="card-date">{{ value.dateOfCreation | date}} , {{ value.authorId }} says: </h3>    
+    <hr>
+
+    <div>
+      <h4 class="card-text">{{ value.text }} </h4>
+    </div>
+
     <div (click)="onCommentDelete()" class="item itemRemove">
-      <i class="glyphicon glyphicon-remove"></i>
+      <i class="glyphicon glyphicon-remove">del</i>
     </div>
 </md-card>

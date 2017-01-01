@@ -15,7 +15,8 @@ export class UserFormComponent {
   userForm: FormGroup;
   defaultForm: FormGroup;
   users : UserModel[];
-
+  title = 'Register';
+  
   //@Output() SubmitChanges = new EventEmitter<UserModel>();
 
   // @Input() set selectedUser(user: UserModel) {

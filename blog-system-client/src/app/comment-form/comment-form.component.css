@@ -1,3 +1,7 @@
+form {
+    color: #9a9393;
+}
+
 md-input-container {
     width: 27%;
     margin-left: 4%;
@@ -5,15 +9,15 @@ md-input-container {
 }
 
 md-textarea {
-    width: 80%;
-    margin-left: 4%;
+    width: 90%;
 }
 
 .SubmitBtn {
     background-color: rgba(102,0,102,0.7);
-    color: #fff !important;
-    margin-left: 4%;
-    margin-top: 3%;
+    color: #fff !important;    
+    float: left;
+    margin-left: 40px;
+    margin-top: 21px;
 }
 
 .danger {
@@ -21,12 +25,7 @@ md-textarea {
   text-transform: uppercase;
   color: red;
   position: absolute;
-  margin-left: 4%;
-}
-
-.danger > #comment{
-    clear: both;
-    float: left;
+  margin-left: 40px;
 }
 
 button {
@@ -35,14 +34,13 @@ button {
 
 md-card {
     margin: 0 auto;
-    width: 60%;
     min-height: 42%;
 }
 
 .formHead {
+    text-align: left;
     padding: 20px 23px;
     margin: 0px;
-    width: 60%;
     margin: 0 auto;
     margin-top: 20px;
     background: rgba(0,0,0,.03);
@@ -55,12 +53,6 @@ md-card {
     font-weight: 700;
 }
 
-.md-input-underline {
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    margin-top: 4px;
-    border-top-width: 1px;
-    border-top-style: solid;
-    color: blueviolet;
+.reset {
+    clear: both;
 }

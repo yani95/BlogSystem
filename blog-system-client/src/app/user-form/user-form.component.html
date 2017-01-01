@@ -1,4 +1,8 @@
-<p class="formHead">Register</p>
+<h1 class="title">
+  {{title}}
+</h1>
+
+<p class="formHead">User Form</p>
 <md-card>
 	<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
 		<md-input-container>

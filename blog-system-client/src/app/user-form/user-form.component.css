@@ -1,3 +1,7 @@
+form {
+    color: #9a9393;
+}
+
 md-input-container {
     width: 57%;
     margin-left: 4%;
@@ -45,4 +49,11 @@ md-card {
     box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
     color: rgba(0,0,0,0.5);
     font-weight: 700;
+}
+
+.title {
+    font-family: 'Lobster';
+    font-size: 70px;
+    color: purple;
+    text-align: center;
 }
