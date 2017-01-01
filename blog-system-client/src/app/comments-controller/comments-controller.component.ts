@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommentComponent } from '../comment/comment.component';
 import { CommentModel } from '../comment/comment.model';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
@@ -12,7 +12,7 @@ import { CommentService } from '../services/comment.service';
 
 export class CommentsControllerComponent {
 
-  comments: CommentModel[];
+  @Input() comments: CommentModel[];
   selectedComment: CommentModel;
   selectedCommentIndex: number;
   title = 'Add comment';
@@ -33,7 +33,7 @@ export class CommentsControllerComponent {
   }
 
   constructor(private commentService: CommentService) {
-    this.ReloadComments();
+    // this.ReloadComments();
   }
 
   ReloadComments(){

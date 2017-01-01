@@ -1,3 +1,5 @@
+import {CommentModel} from '.././comment/comment.model';
+
 export enum CategoriesEnum {
   music,
   travel,
@@ -20,6 +22,7 @@ export class ArticleModel {
         public dateOfModification: any, 
         public picture: string, 
         public authorId: number, 
-        public category: CategoriesEnum )
+        public category: CategoriesEnum,
+        public comments: CommentModel[])
   {  }
 }

@@ -17,8 +17,11 @@ body {
 }
 
 .wrapper {
-  width: 68%;
-  margin: 0 auto;
+  /*width: 68%;
+  margin: 0 auto;*/
+    text-align: center;
+    width: 50%;
+    margin-left: 23%;
 }
 
 .disabled:after {

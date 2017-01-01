@@ -1,5 +1,7 @@
-.card-group{
-  text-align: center;
+md-card {
+    margin: 0 auto;
+    width: 60%;
+    min-height: 42%;
 }
 
 h3 {
@@ -14,13 +16,6 @@ h4 {
     font-weight: 700;
 }
 
-.card {
-    min-height: 419px;
-    width: 100%;
-    display: inline-block;
-    font-weight: 700;
-      border: 0px;
-}
 
 .itemRemove {
     color: red;

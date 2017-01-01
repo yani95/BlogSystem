@@ -1,5 +1,5 @@
-<div class="wrapper">
+<!--<div class="wrapper">-->
   <div *ngFor="let comment of comments; let i=index" class="oneItem" [class.disabled]="i+1==selectedCommentIndex" >
-		<comment [value]="comment" (valueChange)="onCommentChange($event)" (click)="onEdit(comment)" (removeComment)="onRemove(comment.id)"></comment>
+		<comment [value]="comment" (valueChange)="onCommentChange($event)" (removeComment)="onRemove(comment.id)"></comment>
   </div>
-</div>
+<!--</div>-->

@@ -13,9 +13,9 @@
 
 				</div>
 			</div>
-			<comments-controller></comments-controller>
+			<comments-controller [comments]="article.comments"></comments-controller>	
+			<!--<comments-list [comments]="article.comments"></comments-list>		-->
 			<button (click)="goToArticles()" class="btn btn-success">Back to articles</button>
 		</div>
-	</div>
-	<!--<articles-list [myComments]="article.comments"></articles-list>-->
+	</div>	
 </div>

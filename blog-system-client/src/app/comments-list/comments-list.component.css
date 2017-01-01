@@ -2,23 +2,9 @@ body {
   text-align: center;
 }
 
-.card {
-  display: inline-block;
-}
-
 .oneItem {
-  text-align: center;
-  width: 28%;
-  display: inline-block;
-  margin: 30px;
-  margin-top: 80px;
-  box-shadow: -5px -4px 111px -15px rgba(0,0,0,0.5);
-  position: relative;
-}
-
-.wrapper {
-  width: 68%;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 50px;
 }
 
 .disabled:after {

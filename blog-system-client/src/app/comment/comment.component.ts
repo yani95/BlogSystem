@@ -15,8 +15,4 @@ export class CommentComponent {
     event.stopPropagation();
     this.removeComment.emit(commentIndex);
   }
-  
-  onCommentDetails() {
-    event.stopPropagation();
-  }
 }

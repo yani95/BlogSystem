@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { ArticleModel, CategoriesEnum } from '../article/article.model';
 // import * as constants from '../constants/constants';
-import {UrlValidation} from '../custom-validators/custom-validators';
-
+import { UrlValidation } from '../custom-validators/custom-validators';
+import { CommentModel } from '../comment/comment.model';
 
 @Component({
   selector: 'article-form',
@@ -17,12 +17,15 @@ export class ArticleFormComponent {
   defaultForm: FormGroup;
   btnName: string = "Add";
   // constants = constants;
+  allComments: CommentModel[];
+  showComments: Boolean = false;
 
   @Output() SubmitChanges = new EventEmitter<ArticleModel>();
   // @Output() id = new EventEmitter<ArticleModel>();
 
   @Input() set selectedArticle(article: ArticleModel) {
     if (article) {
+      this.showComments = true;
       this.btnName = "Edit";
       this.articleForm.setValue({
         title: article.title,
@@ -31,7 +34,8 @@ export class ArticleFormComponent {
         dateOfModification: article.dateOfModification,
         picture: article.picture,
         authorId: article.authorId,
-        category: String(article.category)
+        category: String(article.category),
+        comments: article.comments
       });
     }
   }
@@ -46,10 +50,12 @@ export class ArticleFormComponent {
         'dateOfModification': [''],
         'picture': ['', Validators.compose([UrlValidation])],
         'authorId': [''],
-        'category':  [String(CategoriesEnum.other)]
+        'category':  [String(CategoriesEnum.other)],
+        'comments': [[]]
       });
     this.defaultForm = this.articleForm.value;
   }
+
   onSubmit(value: any): void {
     let ImgUrl;
 
@@ -66,7 +72,7 @@ export class ArticleFormComponent {
     }
 
     let id = this.selectedArticle ? this.selectedArticle.id : 0;
-    let newArticle = new ArticleModel(id, value.title, value.description,new Date().toLocaleString(),new Date().toLocaleString(), ImgUrl, 1, value.category);
+    let newArticle = new ArticleModel(id, value.title, value.description,new Date().toLocaleString(),new Date().toLocaleString(), ImgUrl, 1, value.category, value.comments);
     this.articleForm.reset(this.defaultForm);
     this.btnName = 'Add';
     this.SubmitChanges.emit(newArticle);
