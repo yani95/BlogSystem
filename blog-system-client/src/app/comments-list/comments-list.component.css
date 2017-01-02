@@ -7,21 +7,6 @@ body {
   margin-top: 50px;
 }
 
-.disabled:after {
-  position: absolute;
-  content: 'Editing';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  opacity: 0.7;
-  font-family: Indian Script;
-  color: #a50200;
-  font-size: 60px;
-  line-height: 8;
-}
-
 .oneItem, .disabled:after {
   border-radius: 20px;
 }

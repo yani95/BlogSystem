@@ -1,4 +1,5 @@
-import {CommentModel} from '.././comment/comment.model';
+import { CommentModel } from '../comment/comment.model';
+import { UserModel } from '../user-details/user.model';
 
 export enum CategoriesEnum {
   music,
@@ -21,7 +22,7 @@ export class ArticleModel {
         public dateOfCreation: any, 
         public dateOfModification: any, 
         public picture: string, 
-        public authorId: number, 
+        public author: UserModel, 
         public category: CategoriesEnum,
         public comments: CommentModel[])
   {  }

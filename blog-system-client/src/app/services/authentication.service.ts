@@ -27,7 +27,8 @@ export class AuthenticationService implements OnInit{
 
                 if(this.authenticatedUser && this.authenticatedUser.password == loggedUser.password){
 
-                    localStorage.setItem("loggedUser", this.authenticatedUser);
+                    localStorage.setItem("loggedUser", JSON.stringify(this.authenticatedUser));
+                   
                     this._router.navigate(['articles']); 
                     return true;
                 }

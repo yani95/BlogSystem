@@ -10,11 +10,9 @@
 					<h3>{{ article.title }}</h3>
 					<h4 class="actorYears">{{article.dateOfCreation | date}} </h4>
 					<p class="card-text">{{article.description}}</p> 
-
 				</div>
 			</div>
-			<comments-controller [comments]="article.comments"></comments-controller>	
-			<!--<comments-list [comments]="article.comments"></comments-list>		-->
+			<comments-controller [comments]="article.comments" [arId]="article.id"></comments-controller>				
 			<button (click)="goToArticles()" class="btn btn-success">Back to articles</button>
 		</div>
 	</div>	

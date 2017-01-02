@@ -11,12 +11,12 @@ h4 {
     color: red;
     border-top-right-radius: 97px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 60px;
+    top: 60px;
     padding: 10px;
     background-color: rgba(255,255,255,0.85);
     /*border-top-right-radius: 21px;*/
-    font-size: 25px;
+    font-size: 500px!important;
     /*border-bottom-left-radius: 48px;*/
 }
 
@@ -50,6 +50,8 @@ span {
 
 a {
   text-decoration: none !important;
+  color: red;
+  float: right;
 }
 
 .card-text {

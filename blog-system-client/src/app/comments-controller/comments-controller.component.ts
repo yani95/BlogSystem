@@ -13,27 +13,19 @@ import { CommentService } from '../services/comment.service';
 export class CommentsControllerComponent {
 
   @Input() comments: CommentModel[];
+  @Input() arId: number;
+
   selectedComment: CommentModel;
   selectedCommentIndex: number;
   title = 'Add comment';
 
   onChangesSubmitted(newComment: CommentModel)
   {
-      if(this.selectedComment)
-      {
-          newComment.id = this.selectedComment.id;
-          this.selectedComment = null;
-          this.selectedCommentIndex = 0;
-          this.commentService.Update(newComment).subscribe(()=>this.ReloadComments(),err=>alert(err.Message));
-      }
-      else
-      {
-          this.commentService.Insert(newComment).subscribe(()=>this.ReloadComments(),err=>alert(err.Message));
-      }
+        this.commentService.Insert(newComment).subscribe(()=>this.ReloadComments(),err=>alert(err.Message));
   }
 
   constructor(private commentService: CommentService) {
-    // this.ReloadComments();
+    this.ReloadComments();
   }
 
   ReloadComments(){
@@ -41,15 +33,10 @@ export class CommentsControllerComponent {
         .subscribe(
           response => {
             this.comments = response;
+            this.comments = this.comments.filter(c => c.articleId == this.arId);
           },
           error => console.error(error)
         );
-  }
-
-  onCommentSelected(comment: CommentModel)
-  {
-    this.selectedCommentIndex = this.comments.findIndex(a=>a.id == comment.id)+1;
-    this.selectedComment = comment;
   }
 
   onCommentDelete(commentIndex: number)

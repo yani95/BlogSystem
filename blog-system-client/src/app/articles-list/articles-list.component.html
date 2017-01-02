@@ -26,6 +26,6 @@
 
 <div class="wrapper">
   <div *ngFor="let article of articles | articlesFilter:filterText | articlesSort:[sortingProperty, order]; let i=index" class="oneItem" [class.disabled]="i+1==selectedArticleIndex" >
-    <article [value]="article" (valueChange)="onArticleChange($event)" (click)="onEdit(article)" (removeArticle)="onRemove(article.id)"></article>
+    <article [value]="article" (valueChange)="onArticleChange($event)" (click)="onEdit(article)" (removeArticle)="onRemove(article.id)" [author]="author"></article>
   </div>
 </div>

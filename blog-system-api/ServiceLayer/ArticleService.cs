@@ -33,6 +33,9 @@ namespace ServiceLayer
             item.authorId = model.authorId;
             item.comments = model.comments;
             item.category = model.category;
+           
+            UserRepository userRepo = new UserRepository();
+            item.author = userRepo.GetById(item.authorId);
         }
 
         protected override void PopulateModel(ArticleModel model, ArticleEntity item)
@@ -46,6 +49,7 @@ namespace ServiceLayer
             model.authorId = item.authorId;
             model.comments = item.comments;
             model.category = item.category;
+            model.author = item.author;
         }
     }
 }

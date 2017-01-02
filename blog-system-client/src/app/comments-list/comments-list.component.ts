@@ -12,8 +12,6 @@ export class CommentsListComponent {
 
   @Input() comments: CommentModel[];
   @Input() selectedCommentIndex: number;
-  
-  @Output() selectComment = new EventEmitter<CommentModel>();
   @Output() deleteComment = new EventEmitter<number>();
   
   onRemove(commentIndex: number)

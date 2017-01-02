@@ -9,8 +9,7 @@ import { ArticleService } from '../services/article.service';
 })
 
 export class ArticlesListComponent {
-
-  // articles: ArticleModel[];
+  
   filterText: string;
   sortingProperties: string[];
   sortingProperty: string;

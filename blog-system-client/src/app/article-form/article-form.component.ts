@@ -20,6 +20,8 @@ export class ArticleFormComponent {
   allComments: CommentModel[];
   showComments: Boolean = false;
 
+  user: any = JSON.parse(localStorage.getItem("loggedUser")); 
+
   @Output() SubmitChanges = new EventEmitter<ArticleModel>();
   // @Output() id = new EventEmitter<ArticleModel>();
 
@@ -33,7 +35,7 @@ export class ArticleFormComponent {
         dateOfCreation: article.dateOfCreation,
         dateOfModification: article.dateOfModification,
         picture: article.picture,
-        authorId: article.authorId,
+        author: article.author,
         category: String(article.category),
         comments: article.comments
       });
@@ -49,7 +51,7 @@ export class ArticleFormComponent {
         'dateOfCreation': [''],
         'dateOfModification': [''],
         'picture': ['', Validators.compose([UrlValidation])],
-        'authorId': [''],
+        'author': [''],
         'category':  [String(CategoriesEnum.other)],
         'comments': [[]]
       });
@@ -72,7 +74,7 @@ export class ArticleFormComponent {
     }
 
     let id = this.selectedArticle ? this.selectedArticle.id : 0;
-    let newArticle = new ArticleModel(id, value.title, value.description,new Date().toLocaleString(),new Date().toLocaleString(), ImgUrl, 1, value.category, value.comments);
+    let newArticle = new ArticleModel(id, value.title, value.description,new Date().toLocaleString(),new Date().toLocaleString(), ImgUrl, this.user, value.category, value.comments);
     this.articleForm.reset(this.defaultForm);
     this.btnName = 'Add';
     this.SubmitChanges.emit(newArticle);

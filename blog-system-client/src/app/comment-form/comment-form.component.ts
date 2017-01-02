@@ -11,6 +11,7 @@ import { ArticleModel } from '../article/article.model';
 
 export class CommentFormComponent {
 
+  @Input() artId: number;
   commentForm: FormGroup;
   defaultForm: FormGroup;
   btnName: string = "Add";
@@ -35,7 +36,7 @@ export class CommentFormComponent {
   }  
 
     onSubmit(value: any): void {
-      let newComment = new CommentModel(value.id, value.text, 1, new Date(), 4); // ArticleModel.id
+      let newComment = new CommentModel(value.id, value.text, 1, new Date(), this.artId);
       this.commentForm.reset(this.defaultForm);
       this.btnName = 'Add';
       this.SubmitChanges.emit(newComment);  
