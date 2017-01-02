@@ -21,13 +21,22 @@ md-input-container {
   text-transform: uppercase;
   color: red;
   position: absolute;
-  margin-left: 4%;
+  margin-left: 5px;
 }
 
 .danger > span {
     clear: both;
     margin-top: 6%;
     float: left;
+}
+
+.error{
+  font-size: 12px;
+  text-transform: uppercase;
+  color: red;
+  position: absolute;
+  margin-left: 4%;
+  margin-top: 35px;
 }
 
 md-card {

@@ -4,7 +4,8 @@
 </h1>
   <ul class="nav navbar-nav">
     <li><a [routerLink]="['articles']" routerLinkActive="active"> Articles </a></li>
-    <li><a routerLinkActive="active" > Log in </a></li>
+    <li><a [routerLink]="['login']" routerLinkActive="active" > Log in </a></li>
+    <!--<li><a [routerLink]="['login']" (click)="logout()" > Log out </a></li>-->
     <li><a [routerLink]="['register']" routerLinkActive="active" > Register </a></li>
   </ul>
 </nav>

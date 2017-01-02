@@ -20,6 +20,7 @@ body {
   width: 68%;
   margin: 0 auto;
   padding-left: 40px;
+  margin-bottom: 50px; 
 }
 
 .wrap-pipes {
@@ -60,6 +61,7 @@ body {
 @media only screen and (max-width: 1670px) {
   .wrapper{
     width: 36%;
+    padding-left: 0px;
   }
   .oneItem{
     width: 100%;

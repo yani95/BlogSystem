@@ -33,17 +33,12 @@ export class UserService
       .catch(err => Observable.throw(err.json()));
   }
 
-  Update(user: UserModel): Observable<ResponseMSG>
-  {
-      return this.http.post(API_USERS_URL,JSON.stringify(user),{headers: this.headers})
-       .catch(err => Observable.throw(err.json()));
-  }
-
-//   DeleteById(id:number): Observable<ResponseMSG>
+//   Update(user: UserModel): Observable<ResponseMSG>
 //   {
-//       return this.http.delete(API_USERS_URL+"/"+id,{headers: this.headers})
+//       return this.http.post(API_USERS_URL,JSON.stringify(user),{headers: this.headers})
 //        .catch(err => Observable.throw(err.json()));
 //   }
+
 }
 
 

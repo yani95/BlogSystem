@@ -65,7 +65,7 @@ export class UserFormComponent {
     //let id = this.selectedUser ? this.selectedUser.id : 0;
     let newUser = new UserModel(value.id, value.username, value.password, value.firstName, value.lastName, false, ImgUrl, value.articles);
    
-    this.userService.Insert(newUser).subscribe( ()=>this.ReloadUsers(),err=>alert(err.Message));
+    this.userService.Insert(newUser).subscribe( ()=>this.ReloadUsers(), err=>alert(err.Message));
     this.userForm.reset(this.defaultForm);
 
     // this.id.emit(value.id);

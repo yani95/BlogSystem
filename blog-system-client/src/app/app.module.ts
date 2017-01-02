@@ -22,10 +22,13 @@ import { CommentsControllerComponent } from './comments-controller/comments-cont
 import { UserService } from './services/user.service';
 import { ArticleService } from './services/article.service';
 import { CommentService } from './services/comment.service';
+import { AuthenticationService } from './services/authentication.service';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ArticlesFilterPipe } from './pipes/articles-filter.pipe';
 import { ArticlesSortingPipe } from './pipes/articles-sorting.pipe';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { PrivateComponent } from './private/private.component';
 
 @NgModule({
     imports: [
@@ -50,12 +53,15 @@ import { ArticlesSortingPipe } from './pipes/articles-sorting.pipe';
         UserFormComponent,
         UserDetailsComponent,
         ArticlesSortingPipe,
-        ArticlesFilterPipe
+        ArticlesFilterPipe,
+        UserLoginComponent,
+        PrivateComponent
     ],
     providers: [
        ArticleService,
        CommentService,
-       UserService
+       UserService,
+       AuthenticationService
     ],
     bootstrap: [AppComponent]
 })

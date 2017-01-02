@@ -52,7 +52,7 @@ ul {
     background-color: purple !important;
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1592px) {
   li{
     margin: 0 auto;
   }
@@ -60,18 +60,33 @@ ul {
    width:55%;
  }
 }
-
-@media only screen and (max-width: 815px) {
-  .title, ul  li a{
-    text-align: center;
+@media only screen and (max-width: 980px) {
+  li{
+    margin: 0 auto;
   }
+  h1{
+   width:25%;
+  }
+  .title{
+    width:25%;
+ }
 }
 
-@media only screen and (max-width: 773px) {
+@media only screen and (max-width: 774px) {
   .title, ul  li a{
     text-align: center;
   }
- .title,ul{
+ .title{
     width: 100%;
+  }
+  ul,li{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .nav {
+    margin-right: 0;
+  }
+  h1{
+     margin-left: 0px;
   }
 } 
