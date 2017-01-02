@@ -7,11 +7,11 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { PrivateComponent } from './private/private.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'logln', pathMatch: 'full' },
   { path: 'articles', component: ArticlesControllerComponent }, 
   { path: 'article/:id', component: ArticleDetailsComponent },
   { path: 'register', component: UserFormComponent },
-  { path: 'home', component: PrivateComponent },
+  { path: 'logln', component: PrivateComponent },
   { path: 'login', component: UserLoginComponent },
   { path: 'user/:id', component: UserDetailsComponent },
   { path: '**', redirectTo: 'articles' } 
