@@ -11,9 +11,10 @@ namespace DataAccess.Entities
     {
         public string text { get; set; }
 
-        public int authorId { get; set; }
+        [ForeignKey("UserEntity")]
+        public int UserEntityId { get; set; }
 
-        //public virtual UserEntity author { get; set; }
+        public virtual UserEntity UserEntity { get; set; }
 
         [ForeignKey("ArticleEntity")]
         public int articleId { get; set; }

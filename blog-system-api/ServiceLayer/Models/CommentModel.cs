@@ -13,13 +13,11 @@ namespace ServiceLayer.Models
         [Required(ErrorMessage = "Description is required!")]
         public string text { get; set; }
 
-        public int authorId { get; set; }
+       // public int authorId { get; set; }
 
-        //public virtual UserEntity author { get; set; }
+        public UserEntity UserEntity { get; set; }
 
         public int articleId { get; set; }
-
-        //public virtual ArticleEntity article { get; set; }
 
         public DateTime dateOfCreation { get; set; }
     }

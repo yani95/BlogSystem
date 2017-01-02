@@ -16,14 +16,12 @@ export class ArticleFormComponent {
   articleForm: FormGroup;
   defaultForm: FormGroup;
   btnName: string = "Add";
-  // constants = constants;
   allComments: CommentModel[];
   showComments: Boolean = false;
 
   user: any = JSON.parse(localStorage.getItem("loggedUser")); 
 
   @Output() SubmitChanges = new EventEmitter<ArticleModel>();
-  // @Output() id = new EventEmitter<ArticleModel>();
 
   @Input() set selectedArticle(article: ArticleModel) {
     if (article) {
@@ -79,7 +77,6 @@ export class ArticleFormComponent {
     this.articleForm.reset(this.defaultForm);
     this.btnName = 'Add';
     this.SubmitChanges.emit(newArticle);
-    // this.id.emit(value.id);
     console.log(value);
   }
 }

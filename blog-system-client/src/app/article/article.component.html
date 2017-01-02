@@ -5,7 +5,7 @@
     <div class="card-block">      
       <h4 class="card-title">{{ value.title }}</h4>     
       <h4>Author: {{ value.author.firstName }} {{ value.author.lastName }}</h4> 
-      <p class="card-text"> {{ value.description }}</p>     
+      <p class="card-text"> {{ value.dateOfCreation | date }}</p>     
       <div class="details-link">
          <a [routerLink]="['/article/',value.id]" routerLinkActive="active" (click)="onArticleDetails()"><span>Full details</span></a>
       </div>

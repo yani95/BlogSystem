@@ -9,10 +9,9 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./article.component.css']
 })
 
-export class ArticleComponent implements OnInit{
+export class ArticleComponent {
   @Input() value: ArticleModel;
   @Output() removeArticle = new EventEmitter();
-  @Input() author: UserModel;
 
   onArticleDelete(articleIndex: number) {
     event.stopPropagation();
@@ -23,15 +22,4 @@ export class ArticleComponent implements OnInit{
     event.stopPropagation();
   }
 
-  ngOnInit(){
-      // this.userService.GetById(this.value.authorId)
-      //     .subscribe((response:any) => {            
-      //       this.author = response;
-      //       console.info(this.author.username);
-      //     });
-      //     console.info(this.value.authorId);  
-  }
-
-  constructor(private userService: UserService){
-  }
 }

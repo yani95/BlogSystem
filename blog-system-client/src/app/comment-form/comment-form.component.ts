@@ -15,20 +15,15 @@ export class CommentFormComponent {
   commentForm: FormGroup;
   defaultForm: FormGroup;
   btnName: string = "Add";
-  // constants = constants;
+  user: any = JSON.parse(localStorage.getItem("loggedUser")); 
 
   @Output() SubmitChanges = new EventEmitter<CommentModel>();
 
-  @Input() set selectedComment(comment: CommentModel) {
-    if (comment) {
-      console.log("Happy New Year!");
-    }
-  }
   constructor(fb?: FormBuilder) {
     this.commentForm = fb.group
       ({
         'text': ['', Validators.compose([Validators.required])],
-        'authorId': [''],
+        'UserEntity': [''],
         'dateOfCreation': [''],
         'articleId': ['']        
       });
@@ -36,10 +31,10 @@ export class CommentFormComponent {
   }  
 
     onSubmit(value: any): void {
-      let newComment = new CommentModel(value.id, value.text, 1, new Date(), this.artId);
+      let newComment = new CommentModel(value.id, value.text, this.user, new Date().toLocaleString(), this.artId);
       this.commentForm.reset(this.defaultForm);
-      this.btnName = 'Add';
       this.SubmitChanges.emit(newComment);  
+      console.info(this.user);
       console.log(value);
   }
 }

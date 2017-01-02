@@ -19,11 +19,6 @@ namespace ServiceLayer
 
         protected override void PopulateItem(ArticleModel model, ref ArticleEntity item)
         {
-            //if (model.id != 0)
-            //{
-            //    item = this.CreateRepository().GetById(model.id);
-            //}
-
             item.id = model.id;
             item.title = model.title;
             item.description = model.description;

@@ -1,5 +1,5 @@
 <h1 class="title">
   {{title}}
 </h1>
-<comment-form [selectedComment]='selectedComment' (SubmitChanges)="onChangesSubmitted($event)" [artId]="arId"></comment-form>
+<comment-form (SubmitChanges)="onChangesSubmitted($event)" [artId]="arId"></comment-form>
 <comments-list [comments]="comments" (removeItem)="onRemove($event)" [selectedCommentIndex]="selectedCommentIndex" (deleteComment)="onCommentDelete($event)"></comments-list>

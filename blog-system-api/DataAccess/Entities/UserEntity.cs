@@ -21,5 +21,7 @@ namespace DataAccess.Entities
         public string picture { get; set; }
 
         public virtual List<ArticleEntity> articles { get; set; }
+
+        public virtual List<CommentEntity> comments { get; set; }
     }
 }
