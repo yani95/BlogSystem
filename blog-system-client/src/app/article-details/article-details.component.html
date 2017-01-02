@@ -8,6 +8,7 @@
 
 				<div class="card-block">
 					<h3>{{ article.title }}</h3>
+					 <h4>Author: {{ article.author.firstName }} {{ article.author.lastName }}</h4> 
 					<h4 class="actorYears">{{article.dateOfCreation | date}} </h4>
 					<p class="card-text">{{article.description}}</p> 
 				</div>

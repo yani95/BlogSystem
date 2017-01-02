@@ -30,12 +30,9 @@ namespace ServiceLayer
             item.dateOfCreation = model.dateOfCreation;
             item.dateOfModification = model.dateOfModification;
             item.picture = model.picture;
-            item.authorId = model.authorId;
+            item.authorId = model.author.id;
             item.comments = model.comments;
-            item.category = model.category;
-           
-            UserRepository userRepo = new UserRepository();
-            item.author = userRepo.GetById(item.authorId);
+            item.category = model.category;    
         }
 
         protected override void PopulateModel(ArticleModel model, ArticleEntity item)
@@ -46,10 +43,11 @@ namespace ServiceLayer
             model.dateOfCreation = item.dateOfCreation;
             model.dateOfModification = item.dateOfModification;
             model.picture = item.picture;
-            model.authorId = item.authorId;
             model.comments = item.comments;
             model.category = item.category;
             model.author = item.author;
+            //UserRepository userRepo = new UserRepository();
+            //item.author = userRepo.GetById(item.authorId);
         }
     }
 }

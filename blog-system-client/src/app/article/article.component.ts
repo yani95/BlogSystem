@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { ArticleModel } from '../article/article.model';
 import { UserModel } from '../user-details/user.model';
 import { UserService } from '../services/user.service';
+
 @Component({
   selector: 'article',
   templateUrl: './article.component.html',

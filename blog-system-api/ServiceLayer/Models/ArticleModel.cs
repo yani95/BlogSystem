@@ -22,11 +22,9 @@ namespace ServiceLayer.Models
         public DateTime dateOfModification { get; set; }
 
         [Url]
-        public string picture { get; set; }
+        public string picture { get; set; }       
 
-        public int authorId { get; set; }
-
-        public virtual UserEntity author { get; set; }
+        public UserEntity author { get; set; }
 
         public virtual List<CommentEntity> comments { get; set; }
 

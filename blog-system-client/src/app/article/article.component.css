@@ -10,6 +10,14 @@ h3 {
     margin-bottom: 20px;
 }
 
+.card-title {
+    font-family: 'Lobster';
+    font-size: 35px;
+    color: purple;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
 h4 {
     font-weight: 700;
 }

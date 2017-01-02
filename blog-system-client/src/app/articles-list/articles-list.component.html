@@ -17,9 +17,9 @@
         <select 
             class="form-control" 
             id="sel2" 
-            (change)="onOrderChange($event)">
-            <option [selected]="order === 'asc'" value="asc">Ascending</option>
+            (change)="onOrderChange($event)">            
             <option [selected]="order === 'desc'" value="desc">Descending</option>
+            <option [selected]="order === 'asc'" value="asc">Ascending</option>
         </select>
     </div>
 </div>

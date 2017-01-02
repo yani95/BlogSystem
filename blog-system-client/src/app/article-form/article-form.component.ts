@@ -74,6 +74,7 @@ export class ArticleFormComponent {
     }
 
     let id = this.selectedArticle ? this.selectedArticle.id : 0;
+    console.info(this.user );
     let newArticle = new ArticleModel(id, value.title, value.description,new Date().toLocaleString(),new Date().toLocaleString(), ImgUrl, this.user, value.category, value.comments);
     this.articleForm.reset(this.defaultForm);
     this.btnName = 'Add';
