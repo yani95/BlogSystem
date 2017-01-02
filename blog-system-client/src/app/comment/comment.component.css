@@ -7,27 +7,8 @@ h4 {
     font-weight: 700;
 }
 
-.itemRemove {
-    color: red;
-    border-top-right-radius: 97px;
-    position: absolute;
-    right: 60px;
-    top: 60px;
-    padding: 10px;
-    background-color: rgba(255,255,255,0.85);
-    /*border-top-right-radius: 21px;*/
-    font-size: 500px!important;
-    /*border-bottom-left-radius: 48px;*/
-}
-
 .details-link {
   margin-bottom: 20px;
-}
-
-.itemRemove i {
-    position: relative;
-    top: -1px;
-    left: 2px;
 }
 
 .card-movies {
@@ -52,6 +33,7 @@ a {
   text-decoration: none !important;
   color: red;
   float: right;
+  cursor: pointer;
 }
 
 .card-text {

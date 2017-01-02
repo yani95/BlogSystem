@@ -18,8 +18,7 @@ export class ArticleDetailsComponent {
  @Input() article: ArticleModel;
 
   constructor(private articleService: ArticleService, private route: ActivatedRoute, private router: Router) {
-    this.ReloadArticles();
-    
+    this.ReloadArticles();    
   }
 
   ReloadArticles() {

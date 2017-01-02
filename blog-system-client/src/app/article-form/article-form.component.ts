@@ -18,6 +18,7 @@ export class ArticleFormComponent {
   btnName: string = "Add";
   allComments: CommentModel[];
   showComments: Boolean = false;
+  // allCategories : CategoriesEnum;
 
   user: any = JSON.parse(localStorage.getItem("loggedUser")); 
 

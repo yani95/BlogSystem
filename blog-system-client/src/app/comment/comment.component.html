@@ -2,7 +2,7 @@
     <img [src]="value.UserEntity.picture" alt="img">    
     <!--<img src="http://i.imgur.com/HQ3YU7n.gif" alt="person">-->
 
-    <h3 class="card-date">{{ value.dateOfCreation | date}} , {{ value.UserEntity.firstName }} {{ value.UserEntity.lastName }} says: 
+    <h3 class="card-date">{{ value.dateOfCreation | date}},  &nbsp;{{ value.UserEntity.firstName }} {{ value.UserEntity.lastName }} says: 
      <a (click)="onCommentDelete()">Delete</a>
     </h3>       
     <hr>

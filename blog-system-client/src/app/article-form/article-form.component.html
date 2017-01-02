@@ -2,16 +2,17 @@
 <md-card>
 	<form [formGroup]="articleForm" (ngSubmit)="onSubmit(articleForm.value)">
 		<md-input-container>
-			<input md-input [formControl]="articleForm.controls['title']" placeholder="Title">
+			<label for="">Title</label><input md-input [formControl]="articleForm.controls['title']">
 			<div *ngIf="!articleForm.controls['title'].valid && articleForm.controls['title'].touched">
 				<div *ngIf="articleForm.controls['title'].errors.required" class="danger">
 					<span>Article title is required!</span>
 				</div>
 			</div>
 		</md-input-container><br>
-
+		
+		<label for="" class="des">Description</label>
 		<div class="desc">
-			<md-textarea class="description" cols="5" rows="3" [formControl]="articleForm.controls['description']" placeholder="Description"></md-textarea>
+			<md-textarea class="description" cols="5" rows="3" [formControl]="articleForm.controls['description']"></md-textarea>
 			<div *ngIf="!articleForm.controls['description'].valid && articleForm.controls['description'].touched">
 				<div *ngIf="articleForm.controls['description'].errors.required" class="danger-desc"> 
 				<!--<div *ngIf="articleForm.controls['description'].errors.maxlength" class="danger">-->
@@ -22,7 +23,7 @@
 		</div><br>
 
 		<md-input-container>
-			<input md-input [formControl]="articleForm.controls['picture']" placeholder="Image url">
+			<label for="">Image url</label><input md-input [formControl]="articleForm.controls['picture']">
 			<div *ngIf="!articleForm.controls['picture'].valid && articleForm.controls['picture'].touched">
 				<div *ngIf="articleForm.controls['picture'].errors.invalidURL" class="danger">
 					<span>URL is not valid!</span>
@@ -30,17 +31,27 @@
 			</div>
 		</md-input-container><br><br>
 
-		<md-input-container>
-			<input md-input [formControl]="articleForm.controls['category']" placeholder="Category">
-			<div *ngIf="!articleForm.controls['category'].valid && articleForm.controls['category'].touched">
-				<div *ngIf="articleForm.controls['category'].errors.required" class="danger">
-					<span>Category is required!</span>
-				</div>
-			</div>
-		</md-input-container><br>
-
-		<!--<input type="submit" class="btn btn-success right btnCreate" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"
-		/>-->
+		<!--<md-input-container>-->
+			<label class="cat">Category</label>
+			<select class="form-control" [formControl]="articleForm.controls['category']">
+				<option value="0">Music</option>
+				<option value="1">Travel</option>
+				<option value="2">Food</option>
+				<option value="3">Business</option>
+				<option value="4">Technology</option>
+				<option value="5">Design</option>
+				<option value="6">Science</option>
+				<option value="7">Education</option>
+				<option value="8">Photography</option>
+				<option value="9">Other</option>				
+			</select>
+<!--
+			 <select id="category" class="form-control" [formControl]="articleForm.controls['category']">
+    			<option *ngFor="let c of article.category; let i=index" value="{{c}}" [selected]="IsSelected(c)">{{c.value}}</option>
+  			</select>-->
+			
+			<!--<input md-input [formControl]="articleForm.controls['category']">			-->
+		<!--</md-input-container><br>-->	
 		<button md-raised-button class="SubmitBtn" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"> Submit </button>
 	</form>
 </md-card>

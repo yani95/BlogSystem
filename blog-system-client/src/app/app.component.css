@@ -5,7 +5,7 @@ h1 {
     font-size: 55px;
     text-shadow: 4px 4px 0px rgba(0,0,0,0.15);
     color: white;
-    width: 70%;
+    width: 68%;
     display: inline-block;
     margin:  0px;
     margin-left: 5%;
@@ -60,6 +60,19 @@ ul {
    width:55%;
  }
 }
+
+@media only screen and (max-width: 1080px) {
+  li{
+    margin: 0 auto;
+  }
+  .title{
+   width:30%;
+ }
+ h1 {
+   width: 30%;
+ }
+}
+
 @media only screen and (max-width: 980px) {
   li{
     margin: 0 auto;

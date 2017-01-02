@@ -41,6 +41,7 @@ h4 {
     border-top-right-radius: 21px;
     font-size: 25px;
     border-bottom-left-radius: 48px;
+    cursor: pointer;
 }
 
 .details-link {
