@@ -5,7 +5,7 @@ h1 {
     font-size: 55px;
     text-shadow: 4px 4px 0px rgba(0,0,0,0.15);
     color: white;
-    width: 68%;
+    width: 30%;
     display: inline-block;
     margin:  0px;
     margin-left: 5%;
@@ -57,7 +57,7 @@ ul {
     margin: 0 auto;
   }
   .title{
-   width:55%;
+   width:30%;
  }
 }
 
@@ -78,10 +78,10 @@ ul {
     margin: 0 auto;
   }
   h1{
-   width:25%;
+   width:20%;
   }
   .title{
-    width:25%;
+    width:20%;
  }
 }
 

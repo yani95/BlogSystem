@@ -1,0 +1,83 @@
+body {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+}
+
+.oneItem {
+  text-align: center;
+  width: 28%;
+  display: inline-block;
+  margin: 30px;
+  margin-top: 80px;
+  box-shadow: -5px -4px 111px -15px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.wrapper {
+  width: 68%;
+  margin: 0 auto;
+  padding-left: 40px;
+  margin-bottom: 50px; 
+}
+
+.wrap-pipes {
+  width: 60%;
+  margin-top: 120px !important;
+  margin: 0 auto;
+}
+
+#search {
+  margin-bottom: 30px;
+  padding: 22px;
+}
+
+#basic-addon1 {
+  padding: 9px;
+}
+
+.disabled:after {
+  position: absolute;
+  content: 'Editing';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.7;
+  font-weight: bold;
+  font-family: 'Lobster';
+  color: purple;
+  font-size: 60px;
+  line-height: 8;
+}
+
+.oneItem, .disabled:after {
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1670px) {
+  .wrapper{
+    width: 36%;
+    padding-left: 0px;
+  }
+  .oneItem{
+    width: 100%;
+    margin-left:0;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  .wrapper{
+    width:50%;
+  }
+}
+
+@media only screen and (max-width: 753px) {
+  .wrapper{
+    width:60%;
+  }
+}

@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { CommentModel } from '../comment/comment.model';
 import { ArticleModel } from '../article/article.model';
+import { UserModel } from '../user-details/user.model';
 
 @Component({
   selector: 'comment-form',
@@ -31,7 +32,15 @@ export class CommentFormComponent {
   }  
 
     onSubmit(value: any): void {
-      let newComment = new CommentModel(value.id, value.text, this.user, new Date().toLocaleString(), this.artId);
+      let newComment;
+      if(this.user) {
+        newComment =  new CommentModel(value.id, value.text, this.user, new Date().toLocaleString(), this.artId);
+      }
+      
+      else {
+        let annonymousUser = new UserModel(4,"annonymous","none","annonymous","user",false,"http://i.imgur.com/HQ3YU7n.gif",null);
+        newComment = new CommentModel(value.id, value.text, annonymousUser, new Date().toLocaleString(), this.artId);
+      }
       this.commentForm.reset(this.defaultForm);
       this.SubmitChanges.emit(newComment);  
       console.info(this.user);

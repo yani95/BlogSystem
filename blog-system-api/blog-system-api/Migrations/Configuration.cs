@@ -27,6 +27,19 @@ namespace blog_system_api.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Users.AddOrUpdate(
+                c => c.username,
+                new UserEntity {
+                    id = 4,
+                    username = "annonymous",
+                    password = "none",
+                    firstName = "annonymous",
+                    lastName = "user",
+                    isAdmin = false,                  
+                    picture = "http://i.imgur.com/HQ3YU7n.gif"
+                }
+            );
         }
     }
 }

@@ -21,7 +21,7 @@ export class CommentsControllerComponent {
 
   onChangesSubmitted(newComment: CommentModel)
   {
-        this.commentService.Insert(newComment).subscribe(()=>this.ReloadComments(),err=>alert(err.Message));
+      this.commentService.Insert(newComment).subscribe(()=>this.ReloadComments(),err=>alert(err.Message));
   }
 
   constructor(private commentService: CommentService) {

@@ -16,6 +16,7 @@ export class ArticlesControllerComponent {
   selectedArticle: ArticleModel;
   selectedArticleIndex: number;
   title = 'Articles';
+  user: any = JSON.parse(localStorage.getItem("loggedUser")); 
 
   onChangesSubmitted(newArticle: ArticleModel)
   {
@@ -39,8 +40,8 @@ export class ArticlesControllerComponent {
   ReloadArticles(){
      this.articleService.GetAll()
         .subscribe(
-          response => {
-            this.articles = response;
+          response => {            
+            this.articles = response.filter(c => c.author.username == this.user.username);
           },
           error => console.error(error)
         );

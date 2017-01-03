@@ -5,11 +5,14 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { PrivateComponent } from './private/private.component';
+import { LoggedInGuard } from './logged-in.guard';
+import { PublicArticlesListComponent } from './public-articles-list/public-articles-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'logln', pathMatch: 'full' },
-  { path: 'articles', component: ArticlesControllerComponent }, 
-  { path: 'article/:id', component: ArticleDetailsComponent },
+  { path: 'articles', component: ArticlesControllerComponent, canActivate: [LoggedInGuard] }, 
+  { path: 'public-articles', component: PublicArticlesListComponent }, 
+  { path: 'article/:id', component: ArticleDetailsComponent},
   { path: 'register', component: UserFormComponent },
   { path: 'logln', component: PrivateComponent },
   { path: 'login', component: UserLoginComponent },

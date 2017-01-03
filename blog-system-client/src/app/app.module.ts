@@ -29,6 +29,8 @@ import { ArticlesFilterPipe } from './pipes/articles-filter.pipe';
 import { ArticlesSortingPipe } from './pipes/articles-sorting.pipe';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { PrivateComponent } from './private/private.component';
+import { LoggedInGuard } from './logged-in.guard';
+import { PublicArticlesListComponent } from './public-articles-list/public-articles-list.component';
 
 @NgModule({
     imports: [
@@ -55,13 +57,15 @@ import { PrivateComponent } from './private/private.component';
         ArticlesSortingPipe,
         ArticlesFilterPipe,
         UserLoginComponent,
-        PrivateComponent
+        PrivateComponent,
+        PublicArticlesListComponent
     ],
     providers: [
        ArticleService,
        CommentService,
        UserService,
-       AuthenticationService
+       AuthenticationService,
+       LoggedInGuard
     ],
     bootstrap: [AppComponent]
 })
