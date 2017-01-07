@@ -31,27 +31,24 @@
 			</div>
 		</md-input-container><br><br>
 
-		<!--<md-input-container>-->
-			<label class="cat">Category</label>
-			<select class="form-control" [formControl]="articleForm.controls['category']">
-				<option value="0">Music</option>
-				<option value="1">Travel</option>
-				<option value="2">Food</option>
-				<option value="3">Business</option>
-				<option value="4">Technology</option>
-				<option value="5">Design</option>
-				<option value="6">Science</option>
-				<option value="7">Education</option>
-				<option value="8">Photography</option>
-				<option value="9">Other</option>				
-			</select>
-<!--
-			 <select id="category" class="form-control" [formControl]="articleForm.controls['category']">
-    			<option *ngFor="let c of article.category; let i=index" value="{{c}}" [selected]="IsSelected(c)">{{c.value}}</option>
-  			</select>-->
+		<label class="cat">Category</label>
+		<select class="form-control" [formControl]="articleForm.controls['category']">
+			<option value="0">Music</option>
+			<option value="1">Travel</option>
+			<option value="2">Food</option>
+			<option value="3">Business</option>
+			<option value="4">Technology</option>
+			<option value="5">Design</option>
+			<option value="6">Science</option>
+			<option value="7">Education</option>
+			<option value="8">Photography</option>
+			<option value="9">Other</option>				
+		</select>
+
+		<!--<select id="category" class="form-control" [formControl]="articleForm.controls['category']">
+			<option *ngFor="let c of article.category; let i=index" value="{{c}}" [selected]="IsSelected(c)">{{c.value}}</option>
+		</select>-->
 			
-			<!--<input md-input [formControl]="articleForm.controls['category']">			-->
-		<!--</md-input-container><br>-->	
 		<button md-raised-button class="SubmitBtn" value="{{btnName}}" [class.btn-warning]="btnName=='Edit'" [disabled]="!articleForm.valid"> Submit </button>
 	</form>
 </md-card>

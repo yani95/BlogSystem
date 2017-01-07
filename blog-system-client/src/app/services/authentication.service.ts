@@ -1,25 +1,20 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserModel } from '../user-details/user.model';
 import { UserService } from '../services/user.service';
 import { Http, Headers } from '@angular/http';
 
 @Injectable()
-export class AuthenticationService implements OnInit{
+export class AuthenticationService {
   users : UserModel[];
   authenticatedUser: any;
   private loggedIn = false;
 
-  constructor(private userService: UserService, private _router: Router)
-  {
+  constructor(private userService: UserService, private _router: Router) {
     this.loggedIn = !!localStorage.getItem("loggedUser");
   }
 
-  ngOnInit(){
-     
-  }
-
-  logIn(loggedUser: UserModel){
+  logIn(loggedUser: UserModel) {
       this.userService.GetAll().subscribe( response => 
               {
                 this.users = response;
@@ -41,13 +36,13 @@ export class AuthenticationService implements OnInit{
                 }, err=>alert(err.Message));
   }
 
-  logOut(){
+  logOut() {
       localStorage.removeItem("loggedUser");
       this._router.navigate(['login']);
       this.loggedIn = false;
   }
 
-  checkCredentials(){
+  checkCredentials() {
     if (localStorage.getItem("loggedUser") === null){
         this._router.navigate(['login']);
     }

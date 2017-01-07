@@ -10,14 +10,14 @@ import { PublicArticlesListComponent } from './public-articles-list/public-artic
 
 const routes: Routes = [
   { path: '', redirectTo: 'logln', pathMatch: 'full' },
-  { path: 'articles', component: ArticlesControllerComponent, canActivate: [LoggedInGuard] }, 
-  { path: 'public-articles', component: PublicArticlesListComponent }, 
-  { path: 'article/:id', component: ArticleDetailsComponent},
+  { path: 'articles', component: ArticlesControllerComponent, canActivate: [LoggedInGuard] },
+  { path: 'public-articles', component: PublicArticlesListComponent },
+  { path: 'article/:id', component: ArticleDetailsComponent },
   { path: 'register', component: UserFormComponent },
   { path: 'logln', component: PrivateComponent },
   { path: 'login', component: UserLoginComponent },
   { path: 'user/:id', component: UserDetailsComponent },
-  { path: '**', redirectTo: 'articles' } 
+  { path: '**', redirectTo: 'articles' }
 ];
 
 export const routing = RouterModule.forRoot(routes);

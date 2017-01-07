@@ -1,4 +1,3 @@
-export class ResponseMSG
-{
+export class ResponseMSG {
   Message:string;
 }

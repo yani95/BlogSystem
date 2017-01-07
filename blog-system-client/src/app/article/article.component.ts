@@ -21,5 +21,4 @@ export class ArticleComponent {
   onArticleDetails() {
     event.stopPropagation();
   }
-
 }

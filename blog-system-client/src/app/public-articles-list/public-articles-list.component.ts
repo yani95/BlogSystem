@@ -42,8 +42,7 @@ export class PublicArticlesListComponent {
 
   @Output() selectArticle = new EventEmitter<ArticleModel>();
 
-  onEdit(article: ArticleModel)
-  {
+  onEdit(article: ArticleModel) {
     this.selectArticle.emit(article);
   } 
 }

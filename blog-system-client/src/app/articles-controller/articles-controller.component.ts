@@ -16,10 +16,9 @@ export class ArticlesControllerComponent {
   selectedArticle: ArticleModel;
   selectedArticleIndex: number;
   title = 'Articles';
-  user: any = JSON.parse(localStorage.getItem("loggedUser")); 
+  user: any = JSON.parse(localStorage.getItem("loggedUser"));
 
-  onChangesSubmitted(newArticle: ArticleModel)
-  {
+  onChangesSubmitted(newArticle: ArticleModel) {
       if(this.selectedArticle)
       {
           newArticle.id = this.selectedArticle.id;
@@ -37,27 +36,25 @@ export class ArticlesControllerComponent {
     this.ReloadArticles();
   }
 
-  ReloadArticles(){
-     this.articleService.GetAll()
-        .subscribe(
-          response => {            
-            this.articles = response.filter(c => c.author.username == this.user.username);
-          },
-          error => console.error(error)
-        );
+  ReloadArticles() {
+    this.articleService.GetAll()
+      .subscribe(
+        response => {            
+          this.articles = response.filter(c => c.author.username == this.user.username);
+        },
+        error => console.error(error)
+      );
   }
 
-  onArticleSelected(article: ArticleModel)
-  {
+  onArticleSelected(article: ArticleModel) {
     this.selectedArticleIndex = this.articles.findIndex(a=>a.id == article.id)+1;
     this.selectedArticle = article;
   }
 
-  onArticleDelete(articleIndex: number)
-  {
-      if (confirm('Are you sure you want to delete this article?')) {
-        this.articleService.DeleteById(articleIndex)
-          .subscribe(()=>this.ReloadArticles(),err=>alert(err.Message));
-      }
+  onArticleDelete(articleIndex: number) {
+    if (confirm('Are you sure you want to delete this article?')) {
+      this.articleService.DeleteById(articleIndex)
+        .subscribe(()=>this.ReloadArticles(),err=>alert(err.Message));
+    }
   }
 }

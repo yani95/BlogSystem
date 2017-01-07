@@ -14,8 +14,7 @@ export class CommentsListComponent {
   @Input() selectedCommentIndex: number;
   @Output() deleteComment = new EventEmitter<number>();
   
-  onRemove(commentIndex: number)
-  {
+  onRemove(commentIndex: number) {
     this.deleteComment.emit(commentIndex);
   }
 }

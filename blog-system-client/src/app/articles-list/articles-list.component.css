@@ -59,11 +59,11 @@ body {
 }
 
 @media only screen and (max-width: 1670px) {
-  .wrapper{
+  .wrapper {
     width: 36%;
     padding-left: 0px;
   }
-  .oneItem{
+  .oneItem {
     width: 100%;
     margin-left:0;
     margin-right: 0;
@@ -71,13 +71,13 @@ body {
 }
 
 @media only screen and (max-width: 1070px) {
-  .wrapper{
+  .wrapper {
     width:50%;
   }
 }
 
 @media only screen and (max-width: 753px) {
-  .wrapper{
+  .wrapper {
     width:60%;
   }
 }

@@ -1,4 +1,4 @@
-.card-group{
+.card-group {
   text-align: center;
 }
 
@@ -23,7 +23,6 @@ h4 {
 }
 
 .card {
-    /*min-height: 419px;*/
     width: 100%;
     display: inline-block;
     font-weight: 700;

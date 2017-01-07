@@ -38,8 +38,8 @@ export class CommentFormComponent {
       }
       
       else {
-        let annonymousUser = new UserModel(4,"annonymous","none","annonymous","user",false,"http://i.imgur.com/HQ3YU7n.gif",null);
-        newComment = new CommentModel(value.id, value.text, annonymousUser, new Date().toLocaleString(), this.artId);
+        let anonymousUser = new UserModel(1,"anonymous","none","Anonymous","User",false,"http://i.imgur.com/HQ3YU7n.gif",null);
+        newComment = new CommentModel(value.id, value.text, anonymousUser, new Date().toLocaleString(), this.artId);
       }
       this.commentForm.reset(this.defaultForm);
       this.SubmitChanges.emit(newComment);  

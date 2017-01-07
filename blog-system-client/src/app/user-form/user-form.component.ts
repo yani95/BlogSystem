@@ -14,10 +14,10 @@ export class UserFormComponent {
 
   userForm: FormGroup;
   defaultForm: FormGroup;
-  users : UserModel[];
+  users: UserModel[];
   title = 'Register';
   
-  //@Output() SubmitChanges = new EventEmitter<UserModel>();
+  // @Output() SubmitChanges = new EventEmitter<UserModel>();
 
   // @Input() set selectedUser(user: UserModel) {
   //   if (user) {
@@ -62,7 +62,7 @@ export class UserFormComponent {
       }
     }
 
-    //let id = this.selectedUser ? this.selectedUser.id : 0;
+    // let id = this.selectedUser ? this.selectedUser.id : 0;
     let newUser = new UserModel(value.id, value.username, value.password, value.firstName, value.lastName, false, ImgUrl, value.articles);
    
     this.userService.Insert(newUser).subscribe( ()=>this.ReloadUsers(), err=>alert(err.Message));

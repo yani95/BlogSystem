@@ -14,6 +14,7 @@ export class ArticlesListComponent {
   sortingProperties: string[];
   sortingProperty: string;
   order: string;
+  user: any = JSON.parse(localStorage.getItem("loggedUser")); 
 
   constructor(private articleService: ArticleService) { }
 
@@ -22,7 +23,12 @@ export class ArticlesListComponent {
       this.sortingProperty = 'title';
       this.order = 'desc';
       this.articleService.GetAll()
-          .subscribe((response:any) => this.articles = response);
+        .subscribe(
+          response => {            
+            this.articles = response.filter(c => c.author.username == this.user.username);
+          },
+          error => console.error(error)
+        );
   }
 
   onFilterInput(e: any) {
@@ -43,13 +49,11 @@ export class ArticlesListComponent {
   @Output() selectArticle = new EventEmitter<ArticleModel>();
   @Output() deleteArticle = new EventEmitter<number>();
 
-  onEdit(article: ArticleModel)
-  {
+  onEdit(article: ArticleModel) {
     this.selectArticle.emit(article);
   }
 
-  onRemove(articleIndex: number)
-  {
+  onRemove(articleIndex: number) {
     this.deleteArticle.emit(articleIndex);
   }  
 }

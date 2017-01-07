@@ -15,7 +15,7 @@ import { ArticleDetailsComponent } from './article-details/article-details.compo
 import { CommentModel } from './comment/comment.model';
 import { ArticleModel } from './article/article.model';
 import { ArticleFormComponent } from './article-form/article-form.component';
-import { FormBuilder,FormGroup,Validators,ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommentFormComponent } from './comment-form/comment-form.component';
 import { ArticlesControllerComponent } from './articles-controller/articles-controller.component';
 import { CommentsControllerComponent } from './comments-controller/comments-controller.component';
@@ -37,7 +37,7 @@ import { PublicArticlesListComponent } from './public-articles-list/public-artic
         BrowserModule,
         FormsModule,
         HttpModule,
-        ReactiveFormsModule, 
+        ReactiveFormsModule,
         MaterialModule.forRoot(),
         routing
     ],

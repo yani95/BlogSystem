@@ -12,10 +12,9 @@ export class UserLoginComponent {
 
   loginForm: FormGroup;
   defaultForm: FormGroup;
-  users : UserModel[];
+  users: UserModel[];
   title = 'Log in';
-  public errorMsg = '';
- 
+  public errorMsg = ''; 
 
   constructor(private authenticationService: AuthenticationService, fb?: FormBuilder) {
     this.loginForm = fb.group
@@ -28,7 +27,7 @@ export class UserLoginComponent {
 
   onSubmit(value: any): void {
 
-    if(!this.authenticationService.logIn(value)){
+    if(!this.authenticationService.logIn(value)) {
         this.errorMsg = 'Failed to login';
     }
 

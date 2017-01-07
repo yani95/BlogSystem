@@ -15,35 +15,28 @@ export class ArticleService
 
   private headers = new Headers({'Content-Type': 'application/json'});
 
-  GetAll(): Observable<ArticleModel[]>
-  {
+  GetAll(): Observable<ArticleModel[]> {
       return this.http.get(API_ARTICLES_URL)
         .map(res => <ArticleModel[]>res.json());
   }
 
-  GetById(id:number): Observable<ArticleModel>
-  {
+  GetById(id:number): Observable<ArticleModel> {
       return this.http.get(API_ARTICLES_URL+"/"+id,{headers: this.headers})
       .map(res => <ArticleModel>res.json());
   }
 
-  Insert(article: ArticleModel): Observable<ResponseMSG>
-  {
+  Insert(article: ArticleModel): Observable<ResponseMSG> {
       return this.http.post(API_ARTICLES_URL,JSON.stringify(article),{headers: this.headers})
       .catch(err => Observable.throw(err.json()));
   }
 
-  Update(article: ArticleModel): Observable<ResponseMSG>
-  {
+  Update(article: ArticleModel): Observable<ResponseMSG> {
       return this.http.post(API_ARTICLES_URL,JSON.stringify(article),{headers: this.headers})
        .catch(err => Observable.throw(err.json()));
   }
 
-  DeleteById(id:number): Observable<ResponseMSG>
-  {
+  DeleteById(id:number): Observable<ResponseMSG> {
       return this.http.delete(API_ARTICLES_URL+"/"+id,{headers: this.headers})
        .catch(err => Observable.throw(err.json()));
   }
 }
-
-

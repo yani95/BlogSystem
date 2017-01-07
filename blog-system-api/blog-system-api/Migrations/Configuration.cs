@@ -31,11 +31,11 @@ namespace blog_system_api.Migrations
             context.Users.AddOrUpdate(
                 c => c.username,
                 new UserEntity {
-                    id = 4,
-                    username = "annonymous",
+                    id = 1,
+                    username = "anonymous",
                     password = "none",
-                    firstName = "annonymous",
-                    lastName = "user",
+                    firstName = "Anonymous",
+                    lastName = "User",
                     isAdmin = false,                  
                     picture = "http://i.imgur.com/HQ3YU7n.gif"
                 }
